@@ -11,7 +11,86 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121021195736) do
+ActiveRecord::Schema.define(:version => 20121022032747) do
+
+  create_table "clients", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "identifier"
+    t.string   "client_email"
+    t.date     "date_of_birth"
+    t.string   "address"
+    t.string   "gender"
+    t.string   "primary_phone"
+    t.string   "secondary_phone"
+    t.text     "notes"
+    t.integer  "user_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "clients", ["user_id"], :name => "index_clients_on_user_id"
+
+  create_table "entries", :force => true do |t|
+    t.datetime "created_at",                                      :null => false
+    t.datetime "updated_at",                                      :null => false
+    t.integer  "client_id"
+    t.string   "mse_form_number"
+    t.string   "name"
+    t.date     "date_of_birth"
+    t.string   "gender"
+    t.text     "circumstance_of_presentation"
+    t.text     "appearance_weight_notes"
+    t.text     "appearance_hair_notes"
+    t.text     "appearance_other_notes"
+    t.text     "appearance_grooming_notes"
+    t.text     "appearance_dress_notes"
+    t.text     "behavior_walk_notes"
+    t.text     "behavior_combativeness_notes"
+    t.text     "behavior_repetition_notes"
+    t.text     "behavior_overactivity_notes"
+    t.text     "behavior_catatonia_notes"
+    t.text     "speech_rate_notes"
+    t.text     "speech_intelligibility_notes"
+    t.text     "speech_volume_notes"
+    t.text     "speech_quality_notes"
+    t.text     "speech_quantity_notes"
+    t.text     "attitude_notes"
+    t.text     "affect_mood_notes"
+    t.text     "affect_expression_notes"
+    t.text     "affect_appropriateness_notes"
+    t.text     "perception_hallucinations_notes"
+    t.text     "perception_disassociation_notes"
+    t.text     "perception_agnosia_notes"
+    t.boolean  "current_treatment_psychotherapy"
+    t.text     "current_treatment_psychotherapy_notes"
+    t.boolean  "current_treatment_psychoactive_medication"
+    t.text     "current_treatment_psychoactive_medication_notes"
+    t.string   "appearance_weight"
+    t.string   "appearance_hair"
+    t.string   "appearance_other"
+    t.string   "appearance_grooming"
+    t.string   "appearance_dress"
+    t.string   "behavior_walk"
+    t.string   "behavior_combativeness"
+    t.string   "behavior_repetition"
+    t.string   "behavior_overactivity"
+    t.string   "behavior_catatonia"
+    t.string   "speech_rate"
+    t.string   "speech_intelligibility"
+    t.string   "speech_volume"
+    t.string   "speech_quality"
+    t.string   "speech_quantity"
+    t.string   "attitude"
+    t.string   "affect_mood"
+    t.string   "affect_expression"
+    t.string   "affect_appropriateness"
+    t.string   "perception_hallucinations"
+    t.string   "perception_disassociation"
+    t.string   "perception_agnosia"
+  end
+
+  add_index "entries", ["client_id"], :name => "index_entries_on_client_id"
 
   create_table "roles", :force => true do |t|
     t.string   "name"

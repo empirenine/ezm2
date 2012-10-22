@@ -1,0 +1,33 @@
+<h1>Your Clients</h1>
+
+<% if @clients.count > 0 %>
+<table>
+  <tr>
+    <th>Identifier</th>
+    <th>Date of birth</th>
+    <th>Address</th>
+    <th>Gender</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @clients.each do |client| %>
+    <tr>
+      <td><%= client.identifier %></td>
+      <td><%= client.date_of_birth %></td>
+      <td><%= client.address %></td>
+      <td><%= client.gender %></td>
+      <td><%= link_to 'Show', client %></td>
+      <td><%= link_to 'Edit', edit_client_path(client) %></td>
+      <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'New Client', new_client_path %>
+<% else %>
+  You do not have any clients.  <%= link_to 'Click here to add a new client', new_client_path %>
+<% end %>
+<br />
+
+

@@ -1,4 +1,13 @@
-<h3>Home</h3>
-<% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p>
+<h3>Welcome to easyMSE</h3>
+<% if user_signed_in? %>
+  <div>
+    <%= link_to 'Your Clients', clients_path %>
+  </div>
+<% else %>
+  <div>
+  <%= link_to 'Login', new_user_session_path %>  
+  </div>
+  <div>
+  <%= link_to 'Sign up', new_user_registration_path %>
+  </div>
 <% end %>

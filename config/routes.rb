@@ -1,4 +1,8 @@
 Easymse2::Application.routes.draw do
+  resources :entries
+
+  resources :clients
+
   authenticated :user do
     root :to => 'home#index'
   end
