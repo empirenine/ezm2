@@ -1,38 +1,166 @@
 <%= simple_form_for(@entry, :html => { :class => "form-horizontal" }) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <h3>Appearance</h3>
-    <div class="form-row"><label>Weight</label><%= f.input :appearance_weight, :collection => [ "Obese", "Over-weight", "Under-weight", "Emaciated", "Unremarkable"], :as => :check_boxes, :item_wrapper_class => 'inline' %></div>
-    <div class="form-row hidden"><%= f.input :appearance_weight_notes, :item_wrapper_class => 'inline', :label => 'Notes' %></div>
-    <div class="form-row"><%= f.input :appearance_hair, :collection => [ "Bizarre Style", "Unnatural color", "Unshaven", "Unremarkable"], :as => :check_boxes, :item_wrapper_class => 'inline', :label => 'Hair' %></div>
-    <div class="form-row hidden"><%= f.input :appearance_hair_notes, :item_wrapper_class => 'inline', :label => 'Notes' %></div>
-  </div>
+  <%= f.input :appearance_weight_obese %>
+    <%= f.input :appearance_weight_overweight %>
+    <%= f.input :appearance_weight_underweight %>
+    <%= f.input :appearance_weight_emaciated %>
+    <%= f.input :appearance_weight_unremarkable %>
+    <%= f.input :appearance_hair_bizarre %>
+    <%= f.input :appearance_hair_unnatural %>
+    <%= f.input :appearance_hair_unshaven %>
+    <%= f.input :appearance_hair_unremarkable %>
+    <%= f.input :appearance_other_wounds %>
+    <%= f.input :appearance_other_scars %>
+    <%= f.input :appearance_other_tattoos %>
+    <%= f.input :appearance_other_jewelry %>
+    <%= f.input :appearance_other_glasses %>
+    <%= f.input :appearance_other_dental_braces %>
+    <%= f.input :appearance_other_unremarkable %>
+    <%= f.input :appearance_grooming_disheveled %>
+    <%= f.input :appearance_grooming_soiled %>
+    <%= f.input :appearance_grooming_body_odor %>
+    <%= f.input :appearance_grooming_halitosis %>
+    <%= f.input :appearance_grooming_unremarkable %>
+    <%= f.input :appearance_dress_undressed %>
+    <%= f.input :appearance_dress_underdressed %>
+    <%= f.input :appearance_dress_overdressed %>
+    <%= f.input :appearance_dress_bizarre %>
+    <%= f.input :appearance_dress_militaristic %>
+    <%= f.input :appearance_dress_unremarkable %>
+    <%= f.input :behavior_walk_gait_march %>
+    <%= f.input :behavior_walk_limp %>
+    <%= f.input :behavior_walk_shuffle %>
+    <%= f.input :behavior_walk_assisted %>
+    <%= f.input :behavior_walk_unremarkable %>
+    <%= f.input :behavior_combativeness_cataplexy %>
+    <%= f.input :behavior_combativeness_aggressive %>
+    <%= f.input :behavior_combativeness_unremarkable %>
+    <%= f.input :behavior_repetition_gestures %>
+    <%= f.input :behavior_repetition_twitches %>
+    <%= f.input :behavior_repetition_stereotypical %>
+    <%= f.input :behavior_repetition_automatism %>
+    <%= f.input :behavior_repetition_mimicry %>
+    <%= f.input :behavior_repetition_echopraxia %>
+    <%= f.input :behavior_repetition_unremarkable %>
+    <%= f.input :behavior_overactivity_psychomotor_agitation %>
+    <%= f.input :behavior_overactivity_hyperactivity %>
+    <%= f.input :behavior_overactivity_tic %>
+    <%= f.input :behavior_overactivity_sleepwalking %>
+    <%= f.input :behavior_overactivity_compulsion %>
+    <%= f.input :behavior_overactivity_unremarkable %>
+    <%= f.input :behavior_catatonia_catalepsy %>
+    <%= f.input :behavior_catatonia_exited %>
+    <%= f.input :behavior_catatonia_stupor %>
+    <%= f.input :behavior_catatonia_rigidity %>
+    <%= f.input :behavior_catatonia_posturing %>
+    <%= f.input :behavior_catatonia_cerea_flexibilitas %>
+    <%= f.input :behavior_catatonia_negativism %>
+    <%= f.input :behavior_catatonia_unremarkable %>
+    <%= f.input :speech_rate_rapid %>
+    <%= f.input :speech_rate_slow %>
+    <%= f.input :speech_rate_unremarkable %>
+    <%= f.input :speech_intelligibility_slurred %>
+    <%= f.input :speech_intelligibility_mumbled %>
+    <%= f.input :speech_intelligibility_stutters %>
+    <%= f.input :speech_intelligibility_accented %>
+    <%= f.input :speech_intelligibility_unremarkable %>
+    <%= f.input :speech_volume_loud %>
+    <%= f.input :speech_volume_whispered %>
+    <%= f.input :speech_volume_unremarkable %>
+    <%= f.input :speech_quality_hesitant %>
+    <%= f.input :speech_quality_emotional %>
+    <%= f.input :speech_quality_monotonous %>
+    <%= f.input :speech_quality_stereotypical %>
+    <%= f.input :speech_quality_unspontaneous %>
+    <%= f.input :speech_quality_echolalia %>
+    <%= f.input :speech_quality_verbigerative %>
+    <%= f.input :speech_quality_unremarkable %>
+    <%= f.input :speech_quantity_garrulous %>
+    <%= f.input :speech_quantity_talkative %>
+    <%= f.input :speech_quantity_responsive %>
+    <%= f.input :speech_quantity_taciturn %>
+    <%= f.input :speech_quantity_mutism %>
+    <%= f.input :speech_quantity_unremarkable %>
+    <%= f.input :attitude_seductive %>
+    <%= f.input :attitude_playful %>
+    <%= f.input :attitude_ingratiating %>
+    <%= f.input :attitude_friendly %>
+    <%= f.input :attitude_cooperative %>
+    <%= f.input :attitude_interested %>
+    <%= f.input :attitude_attentive %>
+    <%= f.input :attitude_frank %>
+    <%= f.input :attitude_indifferent %>
+    <%= f.input :attitude_evasive %>
+    <%= f.input :attitude_defensive %>
+    <%= f.input :attitude_hostile %>
+    <%= f.input :attitude_unremarkable %>
+    <%= f.input :affect_mood_ecstatic %>
+    <%= f.input :affect_mood_euphoric %>
+    <%= f.input :affect_mood_expansive %>
+    <%= f.input :affect_mood_elevated %>
+    <%= f.input :affect_mood_euthymic %>
+    <%= f.input :affect_mood_dysphoric %>
+    <%= f.input :affect_mood_anhedonic %>
+    <%= f.input :affect_mood_depressed %>
+    <%= f.input :affect_mood_alexithymic %>
+    <%= f.input :affect_mood_grieving %>
+    <%= f.input :affect_mood_panicked %>
+    <%= f.input :affect_mood_fearful %>
+    <%= f.input :affect_mood_anxious %>
+    <%= f.input :affect_mood_tense %>
+    <%= f.input :affect_mood_agitated %>
+    <%= f.input :affect_mood_apathetic %>
+    <%= f.input :affect_mood_irritable %>
+    <%= f.input :affect_mood_angry %>
+    <%= f.input :affect_mood_ambivalence %>
+    <%= f.input :affect_mood_mood_swings %>
+    <%= f.input :affect_mood_anorexia %>
+    <%= f.input :affect_mood_insomnia %>
+    <%= f.input :affect_mood_hypersomnia %>
+    <%= f.input :affect_mood_diminshed_libido %>
+    <%= f.input :affect_mood_constipation %>
+    <%= f.input :affect_mood_unremarkable %>
+    <%= f.input :affect_expression_normal %>
+    <%= f.input :affect_expression_restricted %>
+    <%= f.input :affect_expression_blunted %>
+    <%= f.input :affect_expression_flat %>
+    <%= f.input :affect_expression_unremarkable %>
+    <%= f.input :affect_appropriateness_appropriate %>
+    <%= f.input :affect_appropriateness_inappropriate %>
+    <%= f.input :affect_appropriateness_labile %>
+    <%= f.input :perception_hallucinations_hypnagogic %>
+    <%= f.input :perception_hallucinations_hypnopompic %>
+    <%= f.input :perception_hallucinations_auditory %>
+    <%= f.input :perception_hallucinations_visual %>
+    <%= f.input :perception_hallucinations_olfactory %>
+    <%= f.input :perception_hallucinations_gustatory %>
+    <%= f.input :perception_hallucinations_tactile %>
+    <%= f.input :perception_hallucinations_somatic %>
+    <%= f.input :perception_hallucinations_lilliputian %>
+    <%= f.input :perception_hallucinations_mood_congruent %>
+    <%= f.input :perception_hallucinations_mood_incongruent %>
+    <%= f.input :perception_hallucinations_hallucinosis %>
+    <%= f.input :perception_hallucinations_synethesia %>
+    <%= f.input :perception_hallucinations_trailing %>
+    <%= f.input :perception_hallucinations_unremarkable %>
+    <%= f.input :perception_disassociation_hysterical_anesthesia %>
+    <%= f.input :perception_disassociation_macropsia %>
+    <%= f.input :perception_disassociation_micropsia %>
+    <%= f.input :perception_disassociation_depersonalization %>
+    <%= f.input :perception_disassociation_derealization %>
+    <%= f.input :perception_disassociation_fugue %>
+    <%= f.input :perception_disassociation_multiple_personality %>
+    <%= f.input :perception_disassociation_unremarkable %>
+    <%= f.input :perception_agnosia_anosognosia %>
+    <%= f.input :perception_agnosia_autotopagnosia %>
+    <%= f.input :perception_agnosia_visual_agnosia %>
+    <%= f.input :perception_agnosia_astereognosia %>
+    <%= f.input :perception_agnosia_prosopagnosia %>
+    <%= f.input :perception_agnosia_unremarkable%>
+
+
   
-
-
-  <!-- add_column :entries, :appearance_weight, :string
-  add_column :entries, :appearance_hair, :string
-  add_column :entries, :appearance_other, :string
-  add_column :entries, :appearance_grooming, :string
-  add_column :entries, :appearance_dress, :string
-  add_column :entries, :behavior_walk, :string
-  add_column :entries, :behavior_combativeness, :string
-  add_column :entries, :behavior_repetition, :string
-  add_column :entries, :behavior_overactivity, :string
-  add_column :entries, :behavior_catatonia, :string
-  add_column :entries, :speech_rate, :string
-  add_column :entries, :speech_intelligibility, :string
-  add_column :entries, :speech_volume, :string
-  add_column :entries, :speech_quality, :string
-  add_column :entries, :speech_quantity, :string
-  add_column :entries, :attitude, :string
-  add_column :entries, :affect_mood, :string
-  add_column :entries, :affect_expression, :string
-  add_column :entries, :affect_appropriateness, :string
-  add_column :entries, :perception_hallucinations, :string
-  add_column :entries, :perception_disassociation, :string
-  add_column :entries, :perception_agnosia, :string -->
   
   
   <div class="form-actions">
