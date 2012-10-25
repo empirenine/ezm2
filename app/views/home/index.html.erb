@@ -1,2 +1,2 @@
-<style>.navbar .nav{display:none;}.content{background:none;box-shadow:none;}</style>
-<div id="mse" style="position:absolute;top:30%;right:0;bottom:0;left:0;text-align:center;"><h3><%= link_to '...', new_user_registration_path, :style => "color:#333;cursor:default;text-decoration:none;" %><span style="cursor:help;">EasyMSE is coming soon</span><%= link_to '...', new_user_session_path, :style => "color:#333;cursor:default;text-decoration:none;" %></div>
+<% unless user_signed_in? %><style>.navbar .nav{display:none;}.content{background:none;box-shadow:none;}</style>
+<div id="mse" style="position:absolute;top:30%;right:0;bottom:0;left:0;text-align:center;"><h3><%= link_to '...', new_user_registration_path, :style => "color:#333;cursor:default;text-decoration:none;" %><span style="cursor:help;">EasyMSE is coming soon</span><%= link_to '...', new_user_session_path, :style => "color:#333;cursor:default;text-decoration:none;" %></div><% end %>
