@@ -21,13 +21,19 @@
       <td><%= link_to 'Show', client %></td>
       <td><%= link_to 'Edit', edit_client_path(client) %></td>
       <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <!-- <td><%# link_to 'New Entry', new_client_entry_path(client) new_entry_path(client) %></td> -->
+      <td><%= link_to 'New Entry', new_entry_path() %></td>
+      [<% @clients.entries.each do |e| %>
+        
+      <% end %>]
     </tr>
   <% end %>
-</table>
-<%= link_to 'New Client', new_client_path %>
 <% else %>
-  You do not have any clients.  <%= link_to 'Click here to add a new client', new_client_path %>
+  <tr><td class="text-center">You do not have any clients.  <%= link_to 'Click here to add a new client', new_client_path %></td></tr>
 <% end %>
+</table>
+<%= button_to 'Add a New Client', new_client_path, :class => "button" %>
+
 <br />
 
 

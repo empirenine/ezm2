@@ -4,6 +4,7 @@ class ClientsController < ApplicationController
   def index
     @user = current_user
     @clients = @user.clients.all
+    @entry = Entry.new
     # @clients = Client.all
 
     respond_to do |format|

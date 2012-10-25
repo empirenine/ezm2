@@ -1,6 +1,9 @@
 class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.json
+  
+  load_and_authorize_resource :client
+  
   def index
     @entries = Entry.all
 
@@ -41,6 +44,7 @@ class EntriesController < ApplicationController
   # POST /entries.json
   def create
     @entry = Entry.new(params[:entry])
+    # @entry = @client.entries.detect { |e| e.new_record? }
 
     respond_to do |format|
       if @entry.save
