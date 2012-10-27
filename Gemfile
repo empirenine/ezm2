@@ -8,11 +8,11 @@ group :production do
   gem 'thin', '>= 1.5.0'
 end
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
-  gem 'compass-rails'
 end
+gem 'sass-rails',   '~> 3.2.3'
+gem 'compass-rails'
 gem 'jquery-rails'
 gem 'rspec-rails', '>= 2.11.0', :group => [:development, :test]
 gem 'email_spec', '>= 1.2.1', :group => :test
