@@ -11,22 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121022031521) do
+ActiveRecord::Schema.define(:version => 20121027200950) do
 
   create_table "clients", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "identifier"
-    t.string   "client_email"
     t.date     "date_of_birth"
-    t.string   "address"
-    t.string   "gender"
     t.string   "primary_phone"
-    t.string   "secondary_phone"
     t.text     "notes"
     t.integer  "user_id"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   add_index "clients", ["user_id"], :name => "index_clients_on_user_id"
