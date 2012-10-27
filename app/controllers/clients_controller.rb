@@ -2,10 +2,7 @@ class ClientsController < ApplicationController
   # GET /clients
   # GET /clients.json
   def index
-    @user = current_user
-    @clients = @user.clients.all
-    @entry = Entry.new
-    # @clients = Client.all
+    @clients = Client.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -43,8 +40,7 @@ class ClientsController < ApplicationController
   # POST /clients
   # POST /clients.json
   def create
-    @user = current_user
-    @client = @user.clients.create(params[:client])
+    @client = Client.new(params[:client])
 
     respond_to do |format|
       if @client.save
