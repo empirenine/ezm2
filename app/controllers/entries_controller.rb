@@ -1,10 +1,10 @@
 class EntriesController < ApplicationController
-  # GET /entries
-  # GET /entries.json
-  
+
   before_filter :require_login
   load_and_authorize_resource :client
   
+  # GET /entries
+  # GET /entries.json
   def index
     @entries = Entry.all
 
@@ -17,7 +17,7 @@ class EntriesController < ApplicationController
   # GET /entries/1
   # GET /entries/1.json
   def show
-    @entry = Entry.find(params[:id])
+    @entry = @client.entries.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -29,7 +29,7 @@ class EntriesController < ApplicationController
   # GET /entries/new.json
   def new
     @client = Client.find(params[:client_id])
-    @entry = Entry.new
+    @entry = @client.entries.new
     
     respond_to do |format|
       format.html # new.html.erb
@@ -39,7 +39,7 @@ class EntriesController < ApplicationController
 
   # GET /entries/1/edit
   def edit
-    @entry = Entry.find(params[:id])
+    @entry = @client.entries.find(params[:id])
   end
 
   # POST /entries
@@ -62,7 +62,7 @@ class EntriesController < ApplicationController
   # PUT /entries/1
   # PUT /entries/1.json
   def update
-    @entry = Entry.find(params[:id])
+    @entry = @client.entries.find(params[:id])
 
     respond_to do |format|
       if @entry.update_attributes(params[:entry])
@@ -78,11 +78,11 @@ class EntriesController < ApplicationController
   # DELETE /entries/1
   # DELETE /entries/1.json
   def destroy
-    @entry = Entry.find(params[:id])
+    @entry = @client.entries.find(params[:id])
     @entry.destroy
 
     respond_to do |format|
-      format.html { redirect_to entries_url }
+      format.html { redirect_to client_entries_url }
       format.json { head :no_content }
     end
   end
