@@ -1,12 +1,11 @@
 class EntriesController < ApplicationController
-
-  before_filter :require_login
-  load_and_authorize_resource :client
+  # load_and_authorize_resource :entry
   
   # GET /entries
   # GET /entries.json
   def index
-    @entries = Entry.all
+    @client = Client.find(params[:client_id])
+    @entries = @client.entries.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -17,6 +16,7 @@ class EntriesController < ApplicationController
   # GET /entries/1
   # GET /entries/1.json
   def show
+    @client = Client.find(params[:client_id])
     @entry = @client.entries.find(params[:id])
 
     respond_to do |format|
@@ -39,12 +39,14 @@ class EntriesController < ApplicationController
 
   # GET /entries/1/edit
   def edit
+    @client = Client.find(params[:client_id])
     @entry = @client.entries.find(params[:id])
   end
 
   # POST /entries
   # POST /entries.json
   def create
+    @client = Client.find(params[:client_id])
     @entry = @client.entries.new(params[:entry])
     
     respond_to do |format|
@@ -62,6 +64,7 @@ class EntriesController < ApplicationController
   # PUT /entries/1
   # PUT /entries/1.json
   def update
+    @client = Client.find(params[:client_id])
     @entry = @client.entries.find(params[:id])
 
     respond_to do |format|
@@ -78,6 +81,7 @@ class EntriesController < ApplicationController
   # DELETE /entries/1
   # DELETE /entries/1.json
   def destroy
+    @client = Client.find(params[:client_id])
     @entry = @client.entries.find(params[:id])
     @entry.destroy
 
