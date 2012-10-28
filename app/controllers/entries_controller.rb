@@ -2,6 +2,7 @@ class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.json
   
+  before_filter :require_login
   load_and_authorize_resource :client
   
   def index
@@ -27,8 +28,9 @@ class EntriesController < ApplicationController
   # GET /entries/new
   # GET /entries/new.json
   def new
+    @client = Client.find(params[:client_id])
     @entry = Entry.new
-
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @entry }
@@ -43,18 +45,18 @@ class EntriesController < ApplicationController
   # POST /entries
   # POST /entries.json
   def create
-    @entry = Entry.new(params[:entry])
-    # @entry = @client.entries.detect { |e| e.new_record? }
-
+    @entry = @client.entries.new(params[:entry])
+    
     respond_to do |format|
       if @entry.save
-        format.html { redirect_to @entry, notice: 'Entry was successfully created.' }
+        format.html { redirect_to [@client, @entry], notice: 'Entry was successfully created.' }
         format.json { render json: @entry, status: :created, location: @entry }
       else
         format.html { render action: "new" }
         format.json { render json: @entry.errors, status: :unprocessable_entity }
       end
     end
+    
   end
 
   # PUT /entries/1
