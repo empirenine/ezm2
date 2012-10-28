@@ -1,12 +1,22 @@
-<%= simple_form_for([@client, @entry], :html => { :class => "form-horizontal" }) do |f| %>
+<%= simple_form_for([@client, @entry], :html => { :class => "" }) do |f| %>
   <%= f.error_notification %>
-
-  <%= f.input :appearance_weight_obese %>
-    <%= f.input :appearance_weight_overweight %>
-    <%= f.input :appearance_weight_underweight %>
-    <%= f.input :appearance_weight_emaciated %>
-    <%= f.input :appearance_weight_unremarkable %>
-    <%= f.input :appearance_hair_bizarre %>
+    <h2>Appearance</h2>
+    <fieldset class="appearance-weight">
+      <h3>Weight</h3>
+      <div class="checkboxes">
+        <%= f.input :appearance_weight_obese, :label => "Obese", :wrapper => :checkbox %>
+        <%= f.input :appearance_weight_overweight, :label => "Overweight", :wrapper => :checkbox %>
+        <%= f.input :appearance_weight_underweight, :label => "Underweight", :wrapper => :checkbox %>
+        <%= f.input :appearance_weight_emaciated, :label => "Emaciated", :wrapper => :checkbox %>
+        <%= f.input :appearance_weight_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %>
+        <span class="other">
+          <%= f.input :appearance_weight, :label => "Other" %>
+        </span>
+      </div>
+      <div class="notes">
+      </div>
+    </fieldset>
+    <%= f.input :appearance_hair_bizarre, :label => "Overweight", :wrapper => :checkbox %>
     <%= f.input :appearance_hair_unnatural %>
     <%= f.input :appearance_hair_unshaven %>
     <%= f.input :appearance_hair_unremarkable %>
