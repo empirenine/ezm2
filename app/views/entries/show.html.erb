@@ -1,8 +1,12 @@
-<p id="notice"><%= notice %></p>
 
-<% unless @entry.client_id %>
-  <%# @entry.client_id %>
-  shitballs
-<% end %>
+
+<h1>Viewing <%= @client.identifier %>'s entry from <%= @entry.created_at.strftime("%B %d") %></h1>
+<div>
+  This entry was created on <span class="bold"><%= @entry.created_at.strftime("%A, %B %d at %I:%M %p") %></span>
+</div>
+
+<div class="note">Note: Details of this entry will show up eventually</div>
+<br />
+
 <%= link_to 'Edit', edit_client_entry_path(@client, @entry) %> |
 <%= link_to 'Back', client_entries_path(@client) %>
