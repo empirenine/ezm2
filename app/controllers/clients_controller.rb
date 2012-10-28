@@ -1,10 +1,9 @@
 class ClientsController < ApplicationController
   # GET /clients
   # GET /clients.json
-  before_filter :require_login
   
   def index
-    @clients = Client.all
+    @clients = current_user.clients.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -15,7 +14,7 @@ class ClientsController < ApplicationController
   # GET /clients/1
   # GET /clients/1.json
   def show
-    @client = Client.find(params[:id])
+    @client = current_user.clients.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -26,7 +25,7 @@ class ClientsController < ApplicationController
   # GET /clients/new
   # GET /clients/new.json
   def new
-    @client = Client.new
+    @client = current_user.clients.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,13 +35,13 @@ class ClientsController < ApplicationController
 
   # GET /clients/1/edit
   def edit
-    @client = Client.find(params[:id])
+    @client = current_user.clients.find(params[:id])
   end
 
   # POST /clients
   # POST /clients.json
   def create
-    @client = Client.new(params[:client])
+    @client = current_user.clients.new(params[:client])
 
     respond_to do |format|
       if @client.save
@@ -58,7 +57,7 @@ class ClientsController < ApplicationController
   # PUT /clients/1
   # PUT /clients/1.json
   def update
-    @client = Client.find(params[:id])
+    @client = current_user.clients.find(params[:id])
 
     respond_to do |format|
       if @client.update_attributes(params[:client])
@@ -74,7 +73,7 @@ class ClientsController < ApplicationController
   # DELETE /clients/1
   # DELETE /clients/1.json
   def destroy
-    @client = Client.find(params[:id])
+    @client = current_user.clients.find(params[:id])
     @client.destroy
 
     respond_to do |format|
