@@ -11,12 +11,5 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me
   
   has_many :clients
-  
-  before_validation :whitelisted
-
-  def whitelisted
-    unless %w{swink21@gmail.com}.include? email
-      errors.add :email, "is not on our invitation list"  
-    end
-  end
+    
 end
