@@ -1,4 +1,4 @@
-<h1>Listing entries</h1>
+<h1>All entries for <%= @client.identifier %></h1>
 
 <table>
   <tr>
@@ -7,17 +7,18 @@
     <th></th>
     <th></th>
   </tr>
-
-<% @entries.each do |entry| %>
-  <tr>
-    <td><%= entry.id %></td>
-    <td><%= link_to 'Show', entry %></td>
-    <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
-    <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<% if @client.entries.count > 0 %>
+  <% @client.entries.each do |entry| %>
+    <tr>
+      <td><%= entry.id %></td>
+      <td><%= link_to 'Show', client_entry_path(@client, entry) %></td>
+      <td><%= link_to 'Edit', edit_client_entry_path(@client, entry) %></td>
+      <td><%= link_to 'Destroy', client_entry_path(@client, entry), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+<% else %>
+  <tr>You have not yet added any MSE entries for <%= @client.identifier %>. <%= link_to 'Click here to add an entry', new_client_entry_path(@client, @entry) %></tr>
 <% end %>
 </table>
 
-<br />
 
-<%= link_to 'New Entry', new_entry_path() %>

@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-
-<%= link_to 'Edit', edit_entry_path(@entry) %> |
-<%= link_to 'Back', entries_path %>
+<% unless @entry.client_id %>
+  <%# @entry.client_id %>
+  shitballs
+<% end %>
+<%= link_to 'Edit', edit_client_entry_path(@client, @entry) %> |
+<%= link_to 'Back', client_entries_path(@client) %>
