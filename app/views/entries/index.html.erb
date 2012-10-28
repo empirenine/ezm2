@@ -7,18 +7,23 @@
     <th>Actions</th>
     <th></th>
   </tr>
-<% if @client.entries.count > 0 %>
-  <% @client.entries.each do |entry| %>
+  <% if @client.entries.count > 0 %>
+    <% @client.entries.each do |entry| %>
+      <tr>
+        <td><%= entry.id %></td>
+        <td></td>
+        <td><%= link_to 'Show', client_entry_path(@client, entry) %> | <%= link_to 'Edit', edit_client_entry_path(@client, entry) %> | <%= link_to 'Destroy', client_entry_path(@client, entry), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  <% else %>
     <tr>
-      <td><%= entry.id %></td>
-      <td></td>
-      <td><%= link_to 'Show', client_entry_path(@client, entry) %> | <%= link_to 'Edit', edit_client_entry_path(@client, entry) %> | <%= link_to 'Destroy', client_entry_path(@client, entry), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td colspan="4">You have not yet added any MSE entries for <%= @client.identifier %>. <%= link_to 'Click here to add an entry', new_client_entry_path(@client, @entry) %></td>
+    </tr>
+    <tr>
+      <td colspan="4" class="text-center"><%= link_to 'Add New Entry for this client', new_client_entry_path(@client, @entry) %></td>
     </tr>
   <% end %>
-<% else %>
-  <tr>You have not yet added any MSE entries for <%= @client.identifier %>. <%= link_to 'Click here to add an entry', new_client_entry_path(@client, @entry) %></tr>
-<% end %>
 </table>
-<%= link_to 'Add New Entry for this client', new_client_entry_path(@client, @entry) %>
+
 
 

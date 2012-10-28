@@ -11,27 +11,34 @@
     <th>Entry Count</th>
     <th></th>
   </tr>
-<% if @clients.count > 0 %>
-  <%= render "shared/private-toggle" %>
-  <% @clients.each do |client| %>
+  <% if @clients.count > 0 %>
     <tr>
-      <td><%= client.id %></td>
-      <td><%= client.identifier %></td>
-      <td class="private-data"><span><%= client.first_name %></span></td>
-      <td class="private-data"><span><%= client.last_name %></span></td>
-      <td class="private-data"><span><%= client.date_of_birth %></span></td>
-      <td class="private-data"><span><%= client.primary_phone %></span></td>
-      <td class="private-data"><span><%= client.notes %></span></td>
-      <td>
-        <%= link_to client_entries_path(client) do %><%= client.entries.count %> entries<% end %> | 
-        <%= link_to 'New Entry', new_client_entry_path(client, @entry) %> | 
-        <%= link_to 'Client Details', client %> | 
-        <%= link_to 'Edit', edit_client_path(client) %> | 
-        <%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Deleting this client is permanent. You will subsequently lose any information related to this client (including entries) should you continue.  Are you still sure you want to delete this client?' } %></td>
+      <td colspan="9"><%= render "shared/private-toggle" %></td>
+    </tr>
+    <% @clients.each do |client| %>
+      <tr>
+        <td><%= client.id %></td>
+        <td><%= client.identifier %></td>
+        <td class="private-data"><span><%= client.first_name %></span></td>
+        <td class="private-data"><span><%= client.last_name %></span></td>
+        <td class="private-data"><span><%= client.date_of_birth %></span></td>
+        <td class="private-data"><span><%= client.primary_phone %></span></td>
+        <td class="private-data"><span><%= client.notes %></span></td>
+        <td>
+          <%= link_to client_entries_path(client) do %><%= client.entries.count %> entries<% end %> | 
+          <%= link_to 'New Entry', new_client_entry_path(client, @entry) %> | 
+          <%= link_to 'Client Details', client %> | 
+          <%= link_to 'Edit', edit_client_path(client) %> | 
+          <%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Deleting this client is permanent. You will subsequently lose any information related to this client (including entries) should you continue.  Are you still sure you want to delete this client?' } %></td>
+      </tr>
+      <tr>
+        <td colspan="9" class="text-center"><%= link_to 'Add a New Client', new_client_path %></td>
+      </tr>
+    <% end %>
+  <% else %>
+    <tr>
+      <td colspan="9">You have not yet added any clients. <%= link_to 'Click here to add a client', new_client_path %></td>
     </tr>
   <% end %>
-<% else %>
-  <tr>You have not yet added any clients. <%= link_to 'Click here to add a client', new_client_path %></tr>
-<% end %>
 </table>
-<%= link_to 'Add a New Client', new_client_path %>
+
