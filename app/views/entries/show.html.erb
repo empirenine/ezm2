@@ -5,7 +5,159 @@
   This entry was created on <span class="bold"><%= @entry.created_at.strftime("%A, %B %d at %I:%M %p") %></span>
 </div>
 
-<div class="note">Note: Details of this entry will show up eventually</div>
+
+
+<div class="section">
+  <h2>Appearance </h2>
+  <fieldset class="appearance weight no-style">
+    <h3>Weight</h3>
+    <div class="checkboxes"><% unless @entry.appearance_weight_obese == false %><div class="checkbox">Obese</div><% end %><% unless @entry.appearance_weight_overweight == false %><div class="checkbox">Overweight</div><% end %><% unless @entry.appearance_weight_underweight == false %><div class="checkbox">Underweight</div><% end %><% unless @entry.appearance_weight_emaciated == false %><div class="checkbox">Emaciated</div><% end %><% unless @entry.appearance_weight_unremarkable == false %><div class="checkbox">Unremarkable</div><% end %><% if @entry.appearance_weight.length >= 1 %><div class="notes"><div class="checkbox"><%= @entry.appearance_weight %></div><% end %></div>
+    <div class="no-data" style="display:none;">No descriptors added</div>
+  </fieldset>
+  
+  <fieldset class="appearance hair no-style">
+    <h3>Hair</h3>
+    <div class="checkboxes"><% unless @entry.appearance_hair_bizarre == false %><div class="checkbox">Overweight</div><% end %><% unless @entry.appearance_hair_unnatural == false %><div class="checkbox">Unnatural</div><% end %><% unless @entry.appearance_hair_unshaven == false %><div class="checkbox">Unshaven</div><% end %><% unless @entry.appearance_hair_unremarkable == false %><div class="checkbox">Unremarkable</div><% end %><% if @entry.appearance_hair.length >= 1 %><div class="notes"><div class="checkbox"><%= @entry.appearance_hair %></div><% end %></div>
+    <div class="no-data" style="display:none;">No descriptors added</div>
+  </fieldset>
+  
+  <fieldset class="appearance other no-style">
+    <h3>Other</h3>
+    <div class="checkboxes"><% unless @entry.appearance_other_wounds == false %><div class="checkbox">Wounds</div><% end %><% unless @entry.appearance_other_scars == false %><div class="checkbox">Scars</div><% end %><% unless @entry.appearance_other_tattoos == false %><div class="checkbox">Tattoos</div><% end %><% unless @entry.appearance_other_jewelry == false %><div class="checkbox">Jewelry</div><% end %><% unless @entry.appearance_other_glasses == false %><div class="checkbox">Glasses</div><% end %><% unless @entry.appearance_other_dental_braces == false %><div class="checkbox">Dental Braces</div><% end %><% unless @entry.appearance_other_unremarkable == false %><div class="checkbox">Unremarkable</div><% end %><% if @entry.appearance_other.length >= 1 %><div class="checkbox"><%= @entry.appearance_other %></div><% end %></div>
+    <div class="no-data" style="display:none;">No descriptors added</div>
+  </fieldset>
+  
+  <fieldset class="appearance grooming no-style">
+    <h3>Grooming</h3>
+    <div class="checkboxes"><% unless @entry.appearance_grooming_disheveled == false %><div class="checkbox">Disheveled</div><% end %><% unless @entry.appearance_grooming_soiled == false %><div class="checkbox">Soiled</div><% end %><% unless @entry.appearance_grooming_body_odor == false %><div class="checkbox">Body Odor</div><% end %><% unless @entry.appearance_grooming_halitosis == false %><div class="checkbox">Halitosis</div><% end %><% unless @entry.appearance_grooming_unremarkable == false %><div class="checkbox">Unremarkable</div><% end %><% if @entry.appearance_grooming.length >= 1 %><div class="checkbox"><%= @entry.appearance_grooming %></div><% end %></div>
+    <div class="no-data" style="display:none;">No descriptors added</div>
+  </fieldset>
+  
+  <fieldset class="appearance dress no-style">
+    <h3>Dress</h3>
+    <div class="checkboxes"><% unless @entry.appearance_dress_undressed == false %><div class="checkbox">Undressed</div><% end %><% unless @entry.appearance_dress_underdressed == false %><div class="checkbox">Underdressed</div><% end %><% unless @entry.appearance_dress_overdressed == false %><div class="checkbox">Overdressed</div><% end %><% unless @entry.appearance_dress_bizarre == false %><div class="checkbox">Bizarre</div><% end %><% unless @entry.appearance_dress_militaristic == false %><div class="checkbox">Militaristic</div><% end %><% unless @entry.appearance_dress_unremarkable == false %><div class="checkbox">Unremarkable</div><% end %><% if @entry.appearance_dress.length >= 1 %><div class="checkbox"><%= @entry.appearance_dress %></div><% end %></div>
+    <div class="no-data" style="display:none;">No descriptors added</div>
+  </fieldset>
+</div>
+
+<div class="section">
+  <h2>Behavior</h2>
+  <fieldset class="behavior walk no-style">
+    <h3>Walk</h3>
+    <div class="checkboxes"><% unless @entry.behavior_walk_gait_march == false %><div class="checkbox">Gait/March</div><% end %><% unless @entry.behavior_walk_limp == false %><div class="checkbox">Limp</div><% end %><% unless @entry.behavior_walk_shuffle == false %><div class="checkbox">Cataplexy</div><% end %><% unless @entry.behavior_walk_assisted == false %><div class="checkbox">Cataplexy</div><% end %><% unless @entry.behavior_walk_unremarkable == false %><div class="checkbox">Unremarkable</div><% end %><% if @entry.behavior_walk.length >= 1 %><div class="checkbox"><%= @entry.behavior_walk %></div><% end %></div>
+    <div class="no-data" style="display:none;">No descriptors added</div>
+  </fieldset>
+  
+  <fieldset class="behavior combativeness no-style">
+    <h3>Combativeness</h3>
+    <div class="checkboxes"><% unless @entry.behavior_combativeness_cataplexy == false %><div class="checkbox">Cataplexy</div><% end %><% unless @entry.behavior_combativeness_aggressive == false %><div class="checkbox">Aggressive</div><% end %><% unless @entry.behavior_combativeness_unremarkable == false %><div class="checkbox">Unremarkable</div><% end %><% if @entry.behavior_combativeness.length >= 1 %><div class="checkbox"><%= @entry.behavior_combativeness %></div><% end %></div>
+    <div class="no-data" style="display:none;">No descriptors added</div>
+  </fieldset>
+  
+  <fieldset class="behavior repetition no-style">
+    <h3>Repetition</h3>
+    <div class="checkboxes"><% unless @entry.behavior_repetition_gestures == false %><div class="checkbox">Gestures</div><% end %><% unless @entry.behavior_repetition_twitches == false %><div class="checkbox">Twitches</div><% end %><% unless @entry.behavior_repetition_stereotypical == false %><div class="checkbox">Stereotypical</div><% end %><% unless @entry.behavior_repetition_automatism == false %><div class="checkbox">Automatism</div><% end %><% unless @entry.behavior_repetition_mimicry == false %><div class="checkbox">Mimicry</div><% end %><% unless @entry.behavior_repetition_echopraxia == false %><div class="checkbox">Echopraxia</div><% end %><% unless @entry.behavior_repetition_unremarkable == false %><div class="checkbox">Unremarkable</div><% end %><% if @entry.behavior_repetition.length >= 1 %><div class="checkbox"><%= @entry.behavior_repetition %></div><% end %></div>
+    <div class="no-data" style="display:none;">No descriptors added</div>
+  </fieldset>
+  
+  <fieldset class="behavior overactivity no-style">
+    <h3>Overactivity</h3>
+    <div class="checkboxes"><% unless @entry.behavior_overactivity_psychomotor_agitation == false %><div class="checkbox">Psychomotor Agitation</div><% end %><% unless @entry.behavior_overactivity_hyperactivity == false %><div class="checkbox">Hyperactivity</div><% end %><% unless @entry.behavior_overactivity_tic == false %><div class="checkbox">Tic</div><% end %><% unless @entry.behavior_overactivity_sleepwalking == false %><div class="checkbox">Sleepwalking</div><% end %><% unless @entry.behavior_overactivity_compulsion == false %><div class="checkbox">Compulsion</div><% end %><% unless @entry.behavior_overactivity_unremarkable == false %><div class="checkbox">Unremarkable</div><% end %><% if @entry.behavior_overactivity.length >= 1 %><div class="checkbox"><%= @entry.behavior_overactivity %></div><% end %></div>
+    <div class="no-data" style="display:none;">No descriptors added</div>
+  </fieldset>
+  
+  <fieldset class="behavior catatonia no-style">
+    <h3>Catatonia</h3>
+    <div class="checkboxes"><% unless @entry.behavior_catatonia_catalepsy == false %><div class="checkbox">Catalepsy</div><% end %><% unless @entry.behavior_catatonia_exited == false %><div class="checkbox">Exited</div><% end %><% unless @entry.behavior_catatonia_stupor == false %><div class="checkbox">Stupor</div><% end %><% unless @entry.behavior_catatonia_rigidity == false %><div class="checkbox">Rigidity</div><% end %><% unless @entry.behavior_catatonia_posturing == false %><div class="checkbox">Posturing</div><% end %><% unless @entry.behavior_catatonia_cerea_flexibilitas == false %><div class="checkbox">Cerea Flexibilitas</div><% end %><% unless @entry.behavior_catatonia_negativism == false %><div class="checkbox">Negativism</div><% end %><% unless @entry.behavior_catatonia_unremarkable == false %><div class="checkbox">Unremarkable</div><% end %><% if @entry.behavior_catatonia.length >= 1 %><div class="checkbox"><%= @entry.behavior_catatonia %></div><% end %></div>
+    <div class="no-data" style="display:none;">No descriptors added</div>
+  </fieldset>
+</div>
+<div class="section speech">
+  <h2>Speech</h2>
+  <fieldset class="speech rate no-style">
+    <h3>Rate</h3>
+    <div class="checkboxes"><% unless @entry.speech_rate_rapid == false %><div class="checkbox">Rapid</div><% end %><% unless @entry.speech_rate_slow == false %><div class="checkbox">Slow</div><% end %><% unless @entry.speech_rate_unremarkable == false %><div class="checkbox">Unremarkable</div><% end %><% if @entry.speech_rate.length >= 1 %><div class="checkbox"><%= @entry.speech_rate %></div><% end %></div>
+    <div class="no-data" style="display:none;">No descriptors added</div>
+  </fieldset>
+  
+  <fieldset class="speech intelligibility no-style">
+    <h3>Intelligibility</h3>
+    <div class="checkboxes"><% unless @entry.speech_intelligibility_slurred == false %><div class="checkbox">Slurred</div><% end %><% unless @entry.speech_intelligibility_mumbled == false %><div class="checkbox">Mumbled</div><% end %><% unless @entry.speech_intelligibility_stutters == false %><div class="checkbox">Stutters</div><% end %><% unless @entry.speech_intelligibility_accented == false %><div class="checkbox">Accented</div><% end %><% unless @entry.speech_intelligibility_unremarkable == false %><div class="checkbox">Unremarkable</div><% end %><% if @entry.speech_intelligibility.length >= 1 %><div class="checkbox"><%= @entry.speech_intelligibility %></div><% end %></div>
+    <div class="no-data" style="display:none;">No descriptors added</div>
+  </fieldset>
+  
+  <fieldset class="speech volume no-style">
+    <h3>Volume</h3>
+    <div class="checkboxes"><% unless @entry.speech_volume_loud == false %><div class="checkbox">Loud</div><% end %><% unless @entry.speech_volume_whispered == false %><div class="checkbox">Whispered</div><% end %><% unless @entry.speech_volume_unremarkable == false %><div class="checkbox">Unremarkable</div><% end %><% if @entry.speech_volume.length >= 1 %><div class="checkbox"><%= @entry.speech_volume %></div><% end %></div>
+    <div class="no-data" style="display:none;">No descriptors added</div>
+  </fieldset>
+  
+  <fieldset class="speech quality no-style">
+    <h3>Quality</h3>
+    <div class="checkboxes"><% unless @entry.speech_quality_hesitant == false %><div class="checkbox">Hesitant</div><% end %><% unless @entry.speech_quality_emotional == false %><div class="checkbox">Emotional</div><% end %><% unless @entry.speech_quality_monotonous == false %><div class="checkbox">Monotonous</div><% end %><% unless @entry.speech_quality_stereotypical == false %><div class="checkbox">Stereotypical</div><% end %><% unless @entry.speech_quality_unspontaneous == false %><div class="checkbox">Unspontaneous</div><% end %><% unless @entry.speech_quality_echolalia == false %><div class="checkbox">Echolalia</div><% end %><% unless @entry.speech_quality_verbigerative == false %><div class="checkbox">Verbigerative</div><% end %><% unless @entry.speech_quality_unremarkable == false %><div class="checkbox">Unremarkable</div><% end %><% if @entry.speech_quality.length >= 1 %><div class="checkbox"><%= @entry.speech_quality %></div><% end %></div>
+    <div class="no-data" style="display:none;">No descriptors added</div>
+  </fieldset>
+  
+  <fieldset class="speech quantity no-style">
+    <h3>Quantity</h3>
+    <div class="checkboxes"><% unless @entry.speech_quantity_garrulous == false %><div class="checkbox">Garrulous</div><% end %><% unless @entry.speech_quantity_talkative == false %><div class="checkbox">Talkative</div><% end %><% unless @entry.speech_quantity_responsive == false %><div class="checkbox">Responsive</div><% end %><% unless @entry.speech_quantity_taciturn == false %><div class="checkbox">Taciturn</div><% end %><% unless @entry.speech_quantity_mutism == false %><div class="checkbox">Mutism</div><% end %><% unless @entry.speech_quantity_unremarkable == false %><div class="checkbox">Unremarkable</div><% end %><% if @entry.speech_quantity.length >= 1 %><div class="checkbox"><%= @entry.speech_quantity %></div><% end %></div>
+    <div class="no-data" style="display:none;">No descriptors added</div>
+  </fieldset>
+</div>
+<div class="section attitude">
+  <h2>Attitude</h2>
+  <!-- TODO: note that this fieldset only has one class -->
+  <fieldset class="attitude no-style">
+    <h3>Attitude</h3>
+    <div class="checkboxes"><% unless @entry.attitude_seductive == false %><div class="checkbox">Seductive</div><% end %><% unless @entry.attitude_playful == false %><div class="checkbox">Playful</div><% end %><% unless @entry.attitude_ingratiating == false %><div class="checkbox">Ingratiating</div><% end %><% unless @entry.attitude_friendly == false %><div class="checkbox">Friendly</div><% end %><% unless @entry.attitude_cooperative == false %><div class="checkbox">Cooperative</div><% end %><% unless @entry.attitude_interested == false %><div class="checkbox">Interested</div><% end %><% unless @entry.attitude_attentive == false %><div class="checkbox">Attentive</div><% end %><% unless @entry.attitude_frank == false %><div class="checkbox">Frank</div><% end %><% unless @entry.attitude_indifferent == false %><div class="checkbox">Indifferent</div><% end %><% unless @entry.attitude_evasive == false %><div class="checkbox">Evasive</div><% end %><% unless @entry.attitude_defensive == false %><div class="checkbox">Defensive</div><% end %><% unless @entry.attitude_hostile == false %><div class="checkbox">Hostile</div><% end %><% unless @entry.attitude_unremarkable == false %><div class="checkbox">Unremarkable</div><% end %><% if @entry.attitude.length >= 1 %><div class="checkbox"><%= @entry.attitude %></div><% end %></div>
+    <div class="no-data" style="display:none;">No descriptors added</div>
+  </fieldset>
+</div>
+<div class="section affect">
+  <h2>Affect</h2>
+  <fieldset class="affect mood no-style">
+    <h3>Mood</h3>
+    <div class="checkboxes"><% unless @entry.affect_mood_ecstatic == false %><div class="checkbox">Ecstatic</div><% end %><% unless @entry.affect_mood_euphoric == false %><div class="checkbox">Euphoric</div><% end %><% unless @entry.affect_mood_expansive == false %><div class="checkbox">Expansive</div><% end %><% unless @entry.affect_mood_elevated == false %><div class="checkbox">Elevated</div><% end %><% unless @entry.affect_mood_euthymic == false %><div class="checkbox">Euthymic</div><% end %><% unless @entry.affect_mood_dysphoric == false %><div class="checkbox">Dysphoric</div><% end %><% unless @entry.affect_mood_anhedonic == false %><div class="checkbox">Anhedonic</div><% end %><% unless @entry.affect_mood_depressed == false %><div class="checkbox">Depressed</div><% end %><% unless @entry.affect_mood_alexithymic == false %><div class="checkbox">Alexithymic</div><% end %><% unless @entry.affect_mood_grieving == false %><div class="checkbox">Grieving</div><% end %><% unless @entry.affect_mood_panicked == false %><div class="checkbox">Panicked</div><% end %><% unless @entry.affect_mood_fearful == false %><div class="checkbox">Fearful</div><% end %><% unless @entry.affect_mood_anxious == false %><div class="checkbox">Anxious</div><% end %><% unless @entry.affect_mood_tense == false %><div class="checkbox">Tense</div><% end %><% unless @entry.affect_mood_agitated == false %><div class="checkbox">Agitated</div><% end %><% unless @entry.affect_mood_apathetic == false %><div class="checkbox">Apathetic</div><% end %><% unless @entry.affect_mood_irritable == false %><div class="checkbox">Irritable</div><% end %><% unless @entry.affect_mood_angry == false %><div class="checkbox">Angry</div><% end %><% unless @entry.affect_mood_ambivalence == false %><div class="checkbox">Ambivalence</div><% end %><% unless @entry.affect_mood_mood_swings == false %><div class="checkbox">Mood Swings</div><% end %><% unless @entry.affect_mood_anorexia == false %><div class="checkbox">Anorexia</div><% end %><% unless @entry.affect_mood_insomnia == false %><div class="checkbox">Insomnia</div><% end %><% unless @entry.affect_mood_hypersomnia == false %><div class="checkbox">Hypersomnia</div><% end %><% unless @entry.affect_mood_diminshed_libido == false %><div class="checkbox">Diminshed Libido</div><% end %><% unless @entry.affect_mood_constipation == false %><div class="checkbox">Constipation</div><% end %><% unless @entry.affect_mood_unremarkable == false %><div class="checkbox">Unremarkable</div><% end %><% if @entry.affect_mood.length >= 1 %><div class="checkbox"><%= @entry.affect_mood %></div><% end %></div>
+    <div class="no-data" style="display:none;">No descriptors added</div>
+  </fieldset>
+  
+  <fieldset class="affect expression no-style">
+    <h3>Expression</h3>
+    <div class="checkboxes"><% unless @entry.affect_expression_normal == false %><div class="checkbox">Normal</div><% end %><% unless @entry.affect_expression_restricted == false %><div class="checkbox">Restricted</div><% end %><% unless @entry.affect_expression_blunted == false %><div class="checkbox">Blunted</div><% end %><% unless @entry.affect_expression_flat == false %><div class="checkbox">Flat</div><% end %><% unless @entry.affect_expression_unremarkable == false %><div class="checkbox">Unremarkable</div><% end %><% if @entry.affect_expression.length >= 1 %><div class="checkbox"><%= @entry.affect_expression %></div><% end %></div>
+  </fieldset>
+  
+  <fieldset class="affect appropriateness no-style">
+    <h3>Appropriateness</h3>
+    <div class="checkboxes"><% unless @entry.affect_appropriateness_appropriate == false %><div class="checkbox">Appropriate</div><% end %><% unless @entry.affect_appropriateness_inappropriate == false %><div class="checkbox">Inappropriate</div><% end %><% unless @entry.affect_appropriateness_labile == false %><div class="checkbox">Labile</div><% end %><% if @entry.affect_appropriateness.length >= 1 %><div class="checkbox"><%= @entry.affect_appropriateness %></div><% end %></div>
+    <div class="no-data" style="display:none;">No descriptors added</div>
+  </fieldset>
+</div>
+<div class="section perception">
+  <h2>Perception</h2>
+  <fieldset class="perception hallucinations no-style">
+    <h3>Hallucinations</h3>
+    <div class="checkboxes"><% unless @entry.perception_hallucinations_hypnagogic == false %><div class="checkbox">Hypnagogic</div><% end %><% unless @entry.perception_hallucinations_hypnopompic == false %><div class="checkbox">Hypnopompic</div><% end %><% unless @entry.perception_hallucinations_auditory == false %><div class="checkbox">Auditory</div><% end %><% unless @entry.perception_hallucinations_visual == false %><div class="checkbox">Visual</div><% end %><% unless @entry.perception_hallucinations_olfactory == false %><div class="checkbox">Olfactory</div><% end %><% unless @entry.perception_hallucinations_gustatory == false %><div class="checkbox">Gustatory</div><% end %><% unless @entry.perception_hallucinations_tactile == false %><div class="checkbox">Tactile</div><% end %><% unless @entry.perception_hallucinations_somatic == false %><div class="checkbox">Somatic</div><% end %><% unless @entry.perception_hallucinations_lilliputian == false %><div class="checkbox">Lillipution</div><% end %><% unless @entry.perception_hallucinations_mood_congruent == false %><div class="checkbox">Congruent</div><% end %><% unless @entry.perception_hallucinations_mood_incongruent == false %><div class="checkbox">Incongruent</div><% end %><% unless @entry.perception_hallucinations_hallucinosis == false %><div class="checkbox">Hallucinosis</div><% end %><% unless @entry.perception_hallucinations_synethesia == false %><div class="checkbox">Synethesia</div><% end %><% unless @entry.perception_hallucinations_trailing == false %><div class="checkbox">Trailing</div><% end %><% unless @entry.perception_hallucinations_unremarkable == false %><div class="checkbox">Unremarkable</div><% end %><% if @entry.perception_hallucinations.length >= 1 %><div class="checkbox"><%= @entry.perception_hallucinations %></div><% end %></div>
+    <div class="no-data" style="display:none;">No descriptors added</div>
+  </fieldset>
+  
+  <fieldset class="perception disassociation no-style">
+    <h3>Disassociation</h3>
+    <div class="checkboxes"><% unless @entry.perception_disassociation_hysterical_anesthesia == false %><div class="checkbox">Hysterical Anesthesia</div><% end %><% unless @entry.perception_disassociation_macropsia == false %><div class="checkbox">Macropsia</div><% end %><% unless @entry.perception_disassociation_micropsia == false %><div class="checkbox">Micropsia</div><% end %><% unless @entry.perception_disassociation_depersonalization == false %><div class="checkbox">Depersonalization</div><% end %><% unless @entry.perception_disassociation_derealization == false %><div class="checkbox">Derealization</div><% end %><% unless @entry.perception_disassociation_fugue == false %><div class="checkbox">Fugue</div><% end %><% unless @entry.perception_disassociation_multiple_personality == false %><div class="checkbox">Multiple Personality</div><% end %><% unless @entry.perception_disassociation_unremarkable == false %><div class="checkbox">Unremarkable</div><% end %><% if @entry.perception_disassociation.length >= 1 %><div class="checkbox"><%= @entry.perception_disassociation %></div><% end %></div>
+    <div class="no-data" style="display:none;">No descriptors added</div>
+  </fieldset>
+  
+  <fieldset class="perception agnosia no-style">
+    <h3>Agnosia</h3>
+    <div class="checkboxes"><% unless @entry.perception_agnosia_anosognosia == false %><div class="checkbox">Anosognosia</div><% end %><% unless @entry.perception_agnosia_autotopagnosia == false %><div class="checkbox">Autotopagnosia</div><% end %><% unless @entry.perception_agnosia_visual_agnosia == false %><div class="checkbox">Visual Agnosia</div><% end %><% unless @entry.perception_agnosia_astereognosia == false %><div class="checkbox">Astereonosia</div><% end %><% unless @entry.perception_agnosia_prosopagnosia == false %><div class="checkbox">Prosopagnosia</div><% end %><% unless @entry.perception_agnosia_unremarkable == false %><div class="checkbox">Unremarkable</div><% end %><% if @entry.perception_agnosia.length >= 1 %><div class="checkbox"><%= @entry.perception_agnosia %></div><% end %></div>
+    <div class="no-data" style="display:none;">No descriptors added</div>
+  </fieldset>
+</div>
+
+
+
+
+
+
 <br />
 
 <%= link_to 'Edit', edit_client_entry_path(@client, @entry) %> |

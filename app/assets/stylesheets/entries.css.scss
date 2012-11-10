@@ -1,167 +1,195 @@
 @import "bootstrap";
 
-form {
+
+.section {
+  @include border-radius(5px);
+  background-color: #f2f2f2;
+  margin-bottom: 20px;
+}
+
   
-  .section {
-    @include border-radius(5px);
-    background-color: #f2f2f2;
-    margin-bottom: 20px;
+h2{
+  @include border-top-radius(5px);
+  background-color: #e0e0e0;
+  font-size: 22px;
+  line-height: 26px;
+  padding: 8px 15px;
+}
+  
+fieldset {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  padding: 11px 12px;
+  
+  h3 {
+    float: left;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 8px;
+    margin-top: 0;
+    text-align: right;
+    width: 145px;
   }
+
+  .checkboxes, .no-data {
+    border-left: 2px solid #ddd;
+    float: right;
+    margin-bottom: -8px;
+    padding-left: 8px;
+    width: 745px;
   
-  h2{
-    @include border-top-radius(5px);
-    background-color: #e0e0e0;
-    font-size: 32px;
-    line-height: 36px;
-    padding: 8px 15px;
-  }
-  
-  fieldset {
-    border-bottom: 1px solid transparent;
-    border-top: 1px solid transparent;
-    padding: 11px 12px;
-    
-    h3 {
+    .checkbox {
+      @include border-radius(3px);
+      background-color: #dfdfdf;
       float: left;
-      font-size: 16px;
-      line-height: 20px;
-      margin-bottom: 8px;
-      margin-top: 0;
-      text-align: right;
-      width: 145px;
-    }
-  
-    .checkboxes {
-      border-left: 2px solid #ddd;
-      float: right;
-      margin-bottom: -8px;
-      padding-left: 8px;
-      width: 745px;
+      padding: 2px 0 0 3px;
+      margin-right: 8px;
     
-      .checkbox {
-        @include border-radius(3px);
-        background-color: #dfdfdf;
-        float: left;
-        padding: 2px 0 0 3px;
-        margin-right: 8px;
+      label, input {
+        background: none;
+      }
+    
+      &:hover {
+        background-color: #c9c9c9;
       
         label, input {
           background: none;
         }
+      }
+    
+      &.selected {
+        background-color: #777;
+        color: #fff;
       
+        label, input {
+          background: none;
+        }
+      }
+    
+      input[type="checkbox"] {
+        margin-left: 0;
+        margin-right: 6px;
+      }
+    }
+  
+    div.checkbox {
+      margin-bottom: 8px;
+    }
+  
+    .notes {
+      float: left;
+      margin-bottom: 8px;
+    
+      .control-group {
+        margin-bottom: 0;
+    
+        label {
+          @include border-left-radius(3px);
+          background-color: #d9d9d9;
+          display: inline-block;
+          height: 20px;
+          line-height: 20px;
+          margin-bottom: 0;
+          padding: 5px 6px 4px;
+        }
+    
+        .controls {
+          display: inline-block;
+      
+          input.string {
+            @include border-left-radius(0);
+            @include border-right-radius(3px);
+            border-color: #d9d9d9;
+            height: 19px;
+            margin-bottom: 0;
+            position: relative;
+            top: -2px;
+          }
+        }
+      }
+    }
+  
+    .other {
+      margin-left: 19px;
+    }
+  }
+  
+  &:hover {
+    background-color: #F7FAD9;
+    border-color: #d3d3d3;
+    
+    .checkboxes {
+      .checkbox {          
         &:hover {
-          background-color: #c9c9c9;
-        
+          background-color: #c1c1c1;
+
           label, input {
             background: none;
           }
         }
-      
+        
         &.selected {
           background-color: #777;
           color: #fff;
-        
+
           label, input {
             background: none;
           }
         }
-      
-        input[type="checkbox"] {
-          margin-left: 0;
-          margin-right: 6px;
-        }
-      }
-    
-      div.checkbox {
-        margin-bottom: 8px;
-      }
-    
-      .notes {
-        float: left;
-        margin-bottom: 8px;
-      
-        .control-group {
-          margin-bottom: 0;
-      
-          label {
-            @include border-left-radius(3px);
-            background-color: #d9d9d9;
-            display: inline-block;
-            height: 20px;
-            line-height: 20px;
-            margin-bottom: 0;
-            padding: 5px 6px 4px;
-          }
-      
-          .controls {
-            display: inline-block;
-        
-            input.string {
-              @include border-left-radius(0);
-              @include border-right-radius(3px);
-              border-color: #d9d9d9;
-              height: 19px;
-              margin-bottom: 0;
-              position: relative;
-              top: -2px;
-            }
-          }
-        }
-      }
-    
-      .other {
-        margin-left: 19px;
-      }
+      } 
     }
-    
-    /*&.complete {
-          background-color: #e3e3e3;
-          border: 1px solid #d3d3d3;
-          opacity: .6;
-          
-          &:hover {
-            opacity: 1;
-          }
-        }*/
-    
+  }
+  
+  &.no-style{
     &:hover {
-      background-color: #F7FAD9;
-      border-color: #d3d3d3;
-      
-      .checkboxes {
-        .checkbox {          
-          &:hover {
-            background-color: #c1c1c1;
-
-            label, input {
-              background: none;
-            }
-          }
-          
-          &.selected {
-            background-color: #777;
-            color: #fff;
-
-            label, input {
-              background: none;
-            }
-          }
-        } 
-      }
+      background: none;
+      border-color: transparent;
     }
+  }
+}
+
+.entries.show {
+  
+  h1 {
+    margin-bottom: 0;
+  }
+  
+  h2 {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 0;
+  }
+  
+  fieldset {
+    padding: 5px 12px;
+  }
+  
+  .checkboxes {
+    margin-bottom: 0;
     
-    &.no-style{
+    .checkbox {
+      background-color: #c9c9c9;
+      margin-bottom: 0;
+      padding: 5px 8px;
+
       &:hover {
-        background: none;
-        border-color: transparent;
+        background-color: #c9c9c9;
+        cursor: default;
       }
     }
   }
   
-  .section > fieldset {
-/*    &:nth-of-type(odd){
-      background-color: rgba(0,0,0,0.03);
-    }*/
+  .no-data {
+    color: #c9c9c9;
+    line-height: 30px;
     
+    &:hover {
+      color: #777;
+      cursor: default;
+    }
+  }
+  
+  .notes {
+    margin-bottom: 0;
   }
 }
