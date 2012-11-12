@@ -63,4 +63,33 @@ body {
   }
 }
 
+table {
+  border: none;
+  font-weight: 400;
+  
+  thead {
+    border-bottom: 2px solid #999;
+    
+    tr {
+      color: #777;
+      font-size: 14px;
+      line-height: 32px;
+    }
+  }
+  
+  tbody {
+    tr {
+      line-height: 32px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
 
