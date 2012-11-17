@@ -5,11 +5,11 @@
     <fieldset class="appearance weight">
       <h3>Weight</h3>
       <div class="checkboxes">
+        <div class="checkbox"><%= f.input :appearance_weight_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :appearance_weight_obese, :label => "Obese", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :appearance_weight_overweight, :label => "Overweight", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :appearance_weight_underweight, :label => "Underweight", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :appearance_weight_emaciated, :label => "Emaciated", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :appearance_weight_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="notes">
           <%= f.input :appearance_weight, :label => "Notes" %>
         </div>
@@ -18,10 +18,11 @@
     <fieldset class="appearance hair">
       <h3>Hair</h3>
       <div class="checkboxes">
-        <div class="checkbox"><%= f.input :appearance_hair_bizarre, :label => "Overweight", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :appearance_hair_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :appearance_hair_bizarre, :label => "Bizarre", :wrapper => :checkbox %></div>
+        <!-- <div class="checkbox"><%# f.input :appearance_hair_color, :label => "Color", :wrapper => :checkbox %></div> -->
         <div class="checkbox"><%= f.input :appearance_hair_unnatural, :label => "Unnatural", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :appearance_hair_unshaven, :label => "Unshaven", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :appearance_hair_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="notes">
           <%= f.input :appearance_hair, :label => "Notes" %>
         </div>
@@ -30,13 +31,13 @@
     <fieldset class="appearance other">
       <h3>Other</h3>
       <div class="checkboxes">
+        <div class="checkbox"><%= f.input :appearance_other_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :appearance_other_wounds, :label => "Wounds", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :appearance_other_scars, :label => "Scars", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :appearance_other_tattoos, :label => "Tattoos", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :appearance_other_jewelry, :label => "Jewelry", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :appearance_other_glasses, :label => "Glasses", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :appearance_other_dental_braces, :label => "Dental Braces", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :appearance_other_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="notes">
           <%= f.input :appearance_other, :label => "Notes" %>
         </div>
@@ -45,11 +46,11 @@
     <fieldset class="appearance grooming">
       <h3>Grooming</h3>
       <div class="checkboxes">
+        <div class="checkbox"><%= f.input :appearance_grooming_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :appearance_grooming_disheveled, :label => "Disheveled", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :appearance_grooming_soiled, :label => "Soiled", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :appearance_grooming_body_odor, :label => "Body Odor", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :appearance_grooming_halitosis, :label => "Halitosis", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :appearance_grooming_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="notes">
           <%= f.input :appearance_grooming, :label => "Notes" %>
         </div>
@@ -58,12 +59,12 @@
     <fieldset class="appearance dress">
       <h3>Dress</h3>
       <div class="checkboxes">
+        <div class="checkbox"><%= f.input :appearance_dress_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :appearance_dress_undressed, :label => "Undressed", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :appearance_dress_underdressed, :label => "Underdressed", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :appearance_dress_overdressed, :label => "Overdressed", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :appearance_dress_bizarre, :label => "Bizarre", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :appearance_dress_militaristic, :label => "Militaristic", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :appearance_dress_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="notes">
           <%= f.input :appearance_dress, :label => "Notes" %>
         </div>
@@ -75,11 +76,11 @@
     <fieldset class="behavior walk">
       <h3>Walk</h3>
       <div class="checkboxes">
+        <div class="checkbox"><%= f.input :behavior_walk_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :behavior_walk_gait_march, :label => "Gait/March", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :behavior_walk_limp, :label => "Limp", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :behavior_walk_shuffle, :label => "Cataplexy", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :behavior_walk_assisted, :label => "Cataplexy", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :behavior_walk_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="notes">
           <%= f.input :behavior_walk, :label => "Notes" %>
         </div>
@@ -88,9 +89,9 @@
     <fieldset class="behavior combativeness">
       <h3>Combativeness</h3>
       <div class="checkboxes">
+        <div class="checkbox"><%= f.input :behavior_combativeness_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :behavior_combativeness_cataplexy, :label => "Cataplexy", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :behavior_combativeness_aggressive, :label => "Aggressive", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :behavior_combativeness_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="notes">
           <%= f.input :behavior_combativeness, :label => "Notes" %>
         </div>
@@ -99,13 +100,13 @@
     <fieldset class="behavior repetition">
       <h3>Repetition</h3>
       <div class="checkboxes">  
+        <div class="checkbox"><%= f.input :behavior_repetition_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :behavior_repetition_gestures, :label => "Gestures", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :behavior_repetition_twitches, :label => "Twitches", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :behavior_repetition_stereotypical, :label => "Stereotypical", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :behavior_repetition_automatism, :label => "Automatism", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :behavior_repetition_mimicry, :label => "Mimicry", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :behavior_repetition_echopraxia, :label => "Echopraxia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :behavior_repetition_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="notes">
           <%= f.input :behavior_repetition, :label => "Notes" %>
         </div>
@@ -114,12 +115,12 @@
     <fieldset class="behavior overactivity">
       <h3>Overactivity</h3>
       <div class="checkboxes">  
+        <div class="checkbox"><%= f.input :behavior_overactivity_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :behavior_overactivity_psychomotor_agitation, :label => "Psychomotor Agitation", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :behavior_overactivity_hyperactivity, :label => "Hyperactivity", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :behavior_overactivity_tic, :label => "Tic", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :behavior_overactivity_sleepwalking, :label => "Sleepwalking", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :behavior_overactivity_compulsion, :label => "Compulsion", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :behavior_overactivity_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="notes">
           <%= f.input :behavior_overactivity, :label => "Notes" %>
         </div>
@@ -128,6 +129,7 @@
     <fieldset class="behavior catatonia">
       <h3>Catatonia</h3>
       <div class="checkboxes">
+        <div class="checkbox"><%= f.input :behavior_catatonia_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :behavior_catatonia_catalepsy, :label => "Catalepsy", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :behavior_catatonia_exited, :label => "Exited", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :behavior_catatonia_stupor, :label => "Stupor", :wrapper => :checkbox %></div>
@@ -135,7 +137,6 @@
         <div class="checkbox"><%= f.input :behavior_catatonia_posturing, :label => "Posturing", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :behavior_catatonia_cerea_flexibilitas, :label => "Cerea Flexibilitas", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :behavior_catatonia_negativism, :label => "Negativism", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :behavior_catatonia_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="notes">
           <%= f.input :behavior_catatonia, :label => "Notes" %>
         </div>
@@ -147,9 +148,9 @@
     <fieldset class="speech rate">
       <h3>Rate</h3>
       <div class="checkboxes">
+        <div class="checkbox"><%= f.input :speech_rate_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :speech_rate_rapid, :label => "Rapid", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :speech_rate_slow, :label => "Slow", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :speech_rate_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="notes">
           <%= f.input :speech_rate, :label => "Notes" %>
         </div>
@@ -158,11 +159,11 @@
     <fieldset class="speech intelligibility">
       <h3>Intelligibility</h3>
       <div class="checkboxes">
+        <div class="checkbox"><%= f.input :speech_intelligibility_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :speech_intelligibility_slurred, :label => "Slurred", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :speech_intelligibility_mumbled, :label => "Mumbled", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :speech_intelligibility_stutters, :label => "Stutters", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :speech_intelligibility_accented, :label => "Accented", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :speech_intelligibility_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="notes">
           <%= f.input :speech_intelligibility, :label => "Notes" %>
         </div>
@@ -171,9 +172,9 @@
     <fieldset class="speech volume">
       <h3>Volume</h3>
       <div class="checkboxes">
+        <div class="checkbox"><%= f.input :speech_volume_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :speech_volume_loud, :label => "Loud", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :speech_volume_whispered, :label => "Whispered", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :speech_volume_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="notes">
           <%= f.input :speech_volume, :label => "Notes" %>
         </div>
@@ -182,6 +183,7 @@
     <fieldset class="speech quality">
       <h3>Quality</h3>
       <div class="checkboxes">
+        <div class="checkbox"><%= f.input :speech_quality_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :speech_quality_hesitant, :label => "Hesitant", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :speech_quality_emotional, :label => "Emotional", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :speech_quality_monotonous, :label => "Monotonous", :wrapper => :checkbox %></div>
@@ -189,7 +191,6 @@
         <div class="checkbox"><%= f.input :speech_quality_unspontaneous, :label => "Unspontaneous", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :speech_quality_echolalia, :label => "Echolalia", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :speech_quality_verbigerative, :label => "Verbigerative", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :speech_quality_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="notes">
           <%= f.input :speech_quality, :label => "Notes" %>
         </div>
@@ -198,12 +199,12 @@
     <fieldset class="speech quantity">
       <h3>Quantity</h3>
       <div class="checkboxes">
+        <div class="checkbox"><%= f.input :speech_quantity_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :speech_quantity_garrulous, :label => "Garrulous", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :speech_quantity_talkative, :label => "Talkative", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :speech_quantity_responsive, :label => "Responsive", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :speech_quantity_taciturn, :label => "Taciturn", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :speech_quantity_mutism, :label => "Mutism", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :speech_quantity_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="notes">
           <%= f.input :speech_quantity, :label => "Notes" %>
         </div>
@@ -216,6 +217,7 @@
     <fieldset class="attitude">
       <h3>Attitude</h3>
       <div class="checkboxes">
+        <div class="checkbox"><%= f.input :attitude_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :attitude_seductive, :label => "Seductive", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :attitude_playful, :label => "Playful", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :attitude_ingratiating, :label => "Ingratiating", :wrapper => :checkbox %></div>
@@ -228,7 +230,6 @@
         <div class="checkbox"><%= f.input :attitude_evasive, :label => "Evasive", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :attitude_defensive, :label => "Defensive", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :attitude_hostile, :label => "Hostile", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :attitude_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="notes">
           <%= f.input :attitude, :label => "Notes" %>
         </div>
@@ -240,6 +241,7 @@
     <fieldset class="affect mood">
       <h3>Mood</h3>
       <div class="checkboxes">
+        <div class="checkbox"><%= f.input :affect_mood_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :affect_mood_ecstatic, :label => "Ecstatic", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :affect_mood_euphoric, :label => "Euphoric", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :affect_mood_expansive, :label => "Expansive", :wrapper => :checkbox %></div>
@@ -265,7 +267,6 @@
         <div class="checkbox"><%= f.input :affect_mood_hypersomnia, :label => "Hypersomnia", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :affect_mood_diminshed_libido, :label => "Diminshed Libido", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :affect_mood_constipation, :label => "Constipation", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :affect_mood_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="notes">
           <%= f.input :affect_mood, :label => "Notes" %>
         </div>
@@ -274,11 +275,11 @@
     <fieldset class="affect expression">
       <h3>Expression</h3>
       <div class="checkboxes">
+        <div class="checkbox"><%= f.input :affect_expression_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :affect_expression_normal, :label => "Normal", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :affect_expression_restricted, :label => "Restricted", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :affect_expression_blunted, :label => "Blunted", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :affect_expression_flat, :label => "Flat", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :affect_expression_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="notes">
           <%= f.input :affect_expression, :label => "Notes" %>
         </div>
@@ -301,6 +302,7 @@
     <fieldset class="perception hallucinations">
       <h3>Hallucinations</h3>
       <div class="checkboxes">
+        <div class="checkbox"><%= f.input :perception_hallucinations_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :perception_hallucinations_hypnagogic, :label => "Hypnagogic", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :perception_hallucinations_hypnopompic, :label => "Hypnopompic", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :perception_hallucinations_auditory, :label => "Auditory", :wrapper => :checkbox %></div>
@@ -315,7 +317,6 @@
         <div class="checkbox"><%= f.input :perception_hallucinations_hallucinosis, :label => "Hallucinosis", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :perception_hallucinations_synethesia, :label => "Synethesia", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :perception_hallucinations_trailing, :label => "Trailing", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="notes">
           <%= f.input :perception_hallucinations, :label => "Notes" %>
         </div>
@@ -324,6 +325,7 @@
     <fieldset class="perception disassociation">
       <h3>Disassociation</h3>
       <div class="checkboxes">
+        <div class="checkbox"><%= f.input :perception_disassociation_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :perception_disassociation_hysterical_anesthesia, :label => "Hysterical Anesthesia", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :perception_disassociation_macropsia, :label => "Macropsia", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :perception_disassociation_micropsia, :label => "Micropsia", :wrapper => :checkbox %></div>
@@ -331,7 +333,6 @@
         <div class="checkbox"><%= f.input :perception_disassociation_derealization, :label => "Derealization", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :perception_disassociation_fugue, :label => "Fugue", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :perception_disassociation_multiple_personality, :label => "Multiple Personality", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="notes">
           <%= f.input :perception_disassociation, :label => "Notes" %>
         </div>
@@ -340,18 +341,224 @@
     <fieldset class="perception agnosia">
       <h3>Agnosia</h3>
       <div class="checkboxes">
+        <div class="checkbox"><%= f.input :perception_agnosia_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :perception_agnosia_anosognosia, :label => "Anosognosia", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :perception_agnosia_autotopagnosia, :label => "Autotopagnosia", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :perception_agnosia_visual_agnosia, :label => "Visual Agnosia", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :perception_agnosia_astereognosia, :label => "Astereonosia", :wrapper => :checkbox %></div>
         <div class="checkbox"><%= f.input :perception_agnosia_prosopagnosia, :label => "Prosopagnosia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_agnosia_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
         <div class="notes">
           <%= f.input :perception_agnosia, :label => "Notes" %>
         </div>
       </div>
     </fieldset>
   </div>
+  
+  <div class="section thought-process">
+    <h2>Thought Process</h2>
+    <fieldset class="perception hallucinations">
+      <h3>Content</h3>
+      <div class="checkboxes">
+        <div class="checkbox"><%= f.input :perception_hallucinations_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_hypnagogic, :label => "Hypnagogic", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_hypnopompic, :label => "Hypnopompic", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_auditory, :label => "Auditory", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_visual, :label => "Visual", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_olfactory, :label => "Olfactory", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_gustatory, :label => "Gustatory", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_tactile, :label => "Tactile", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_somatic, :label => "Somatic", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_lilliputian, :label => "Lillipution", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_mood_congruent, :label => "Congruent", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_mood_incongruent, :label => "Incongruent", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_hallucinosis, :label => "Hallucinosis", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_synethesia, :label => "Synethesia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_trailing, :label => "Trailing", :wrapper => :checkbox %></div>
+        <div class="notes">
+          <%= f.input :perception_hallucinations, :label => "Notes" %>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="perception disassociation">
+      <h3>Delusions</h3>
+      <div class="checkboxes">
+        <div class="checkbox"><%= f.input :perception_disassociation_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_hysterical_anesthesia, :label => "Hysterical Anesthesia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_macropsia, :label => "Macropsia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_micropsia, :label => "Micropsia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_depersonalization, :label => "Depersonalization", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_derealization, :label => "Derealization", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_fugue, :label => "Fugue", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_multiple_personality, :label => "Multiple Personality", :wrapper => :checkbox %></div>
+        <div class="notes">
+          <%= f.input :perception_disassociation, :label => "Notes" %>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="perception agnosia">
+      <h3>Preoccupations/Suicidal Ideation</h3>
+      <div class="checkboxes">
+        <div class="checkbox"><%= f.input :perception_agnosia_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_agnosia_anosognosia, :label => "Anosognosia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_agnosia_autotopagnosia, :label => "Autotopagnosia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_agnosia_visual_agnosia, :label => "Visual Agnosia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_agnosia_astereognosia, :label => "Astereonosia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_agnosia_prosopagnosia, :label => "Prosopagnosia", :wrapper => :checkbox %></div>
+        <div class="notes">
+          <%= f.input :perception_agnosia, :label => "Notes" %>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="perception disassociation">
+      <h3>Phobia</h3>
+      <div class="checkboxes">
+        <div class="checkbox"><%= f.input :perception_disassociation_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_hysterical_anesthesia, :label => "Hysterical Anesthesia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_macropsia, :label => "Macropsia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_micropsia, :label => "Micropsia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_depersonalization, :label => "Depersonalization", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_derealization, :label => "Derealization", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_fugue, :label => "Fugue", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_multiple_personality, :label => "Multiple Personality", :wrapper => :checkbox %></div>
+        <div class="notes">
+          <%= f.input :perception_disassociation, :label => "Notes" %>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="perception disassociation">
+      <h3>Thought Form</h3>
+      <div class="checkboxes">
+        <div class="checkbox"><%= f.input :perception_disassociation_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_hysterical_anesthesia, :label => "Hysterical Anesthesia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_macropsia, :label => "Macropsia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_micropsia, :label => "Micropsia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_depersonalization, :label => "Depersonalization", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_derealization, :label => "Derealization", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_fugue, :label => "Fugue", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_multiple_personality, :label => "Multiple Personality", :wrapper => :checkbox %></div>
+        <div class="notes">
+          <%= f.input :perception_disassociation, :label => "Notes" %>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  
+  <div class="section cognition">
+    <h2>Cognition</h2>
+    <fieldset class="cognition ">
+      <h3>Consciousness</h3>
+      <div class="checkboxes">
+        <div class="checkbox"><%= f.input :perception_hallucinations_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_hypnagogic, :label => "Hypnagogic", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_hypnopompic, :label => "Hypnopompic", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_auditory, :label => "Auditory", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_visual, :label => "Visual", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_olfactory, :label => "Olfactory", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_gustatory, :label => "Gustatory", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_tactile, :label => "Tactile", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_somatic, :label => "Somatic", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_lilliputian, :label => "Lillipution", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_mood_congruent, :label => "Congruent", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_mood_incongruent, :label => "Incongruent", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_hallucinosis, :label => "Hallucinosis", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_synethesia, :label => "Synethesia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_trailing, :label => "Trailing", :wrapper => :checkbox %></div>
+        <div class="notes">
+          <%= f.input :perception_hallucinations, :label => "Notes" %>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="perception disassociation">
+      <h3>Orientation</h3>
+      <div class="checkboxes">
+        <div class="checkbox"><%= f.input :perception_disassociation_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_hysterical_anesthesia, :label => "Hysterical Anesthesia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_macropsia, :label => "Macropsia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_micropsia, :label => "Micropsia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_depersonalization, :label => "Depersonalization", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_derealization, :label => "Derealization", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_fugue, :label => "Fugue", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_multiple_personality, :label => "Multiple Personality", :wrapper => :checkbox %></div>
+        <div class="notes">
+          <%= f.input :perception_disassociation, :label => "Notes" %>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="perception agnosia">
+      <h3>Concentration</h3>
+      <div class="checkboxes">
+        <div class="checkbox"><%= f.input :perception_agnosia_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_agnosia_anosognosia, :label => "Anosognosia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_agnosia_autotopagnosia, :label => "Autotopagnosia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_agnosia_visual_agnosia, :label => "Visual Agnosia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_agnosia_astereognosia, :label => "Astereonosia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_agnosia_prosopagnosia, :label => "Prosopagnosia", :wrapper => :checkbox %></div>
+        <div class="notes">
+          <%= f.input :perception_agnosia, :label => "Notes" %>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="perception disassociation">
+      <h3>Memory</h3>
+      <div class="checkboxes">
+        <div class="checkbox"><%= f.input :perception_disassociation_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_hysterical_anesthesia, :label => "Hysterical Anesthesia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_macropsia, :label => "Macropsia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_micropsia, :label => "Micropsia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_depersonalization, :label => "Depersonalization", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_derealization, :label => "Derealization", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_fugue, :label => "Fugue", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_multiple_personality, :label => "Multiple Personality", :wrapper => :checkbox %></div>
+        <div class="notes">
+          <%= f.input :perception_disassociation, :label => "Notes" %>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  
+  <div class="section cognition">
+    <h2>Insight/Judgement</h2>
+    <fieldset class="cognition ">
+      <h3>Judgement</h3>
+      <div class="checkboxes">
+        <div class="checkbox"><%= f.input :perception_hallucinations_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_hypnagogic, :label => "Hypnagogic", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_hypnopompic, :label => "Hypnopompic", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_auditory, :label => "Auditory", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_visual, :label => "Visual", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_olfactory, :label => "Olfactory", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_gustatory, :label => "Gustatory", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_tactile, :label => "Tactile", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_somatic, :label => "Somatic", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_lilliputian, :label => "Lillipution", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_mood_congruent, :label => "Congruent", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_mood_incongruent, :label => "Incongruent", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_hallucinosis, :label => "Hallucinosis", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_synethesia, :label => "Synethesia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_hallucinations_trailing, :label => "Trailing", :wrapper => :checkbox %></div>
+        <div class="notes">
+          <%= f.input :perception_hallucinations, :label => "Notes" %>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="perception disassociation">
+      <h3>Insight</h3>
+      <div class="checkboxes">
+        <div class="checkbox"><%= f.input :perception_disassociation_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_hysterical_anesthesia, :label => "Hysterical Anesthesia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_macropsia, :label => "Macropsia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_micropsia, :label => "Micropsia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_depersonalization, :label => "Depersonalization", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_derealization, :label => "Derealization", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_fugue, :label => "Fugue", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :perception_disassociation_multiple_personality, :label => "Multiple Personality", :wrapper => :checkbox %></div>
+        <div class="notes">
+          <%= f.input :perception_disassociation, :label => "Notes" %>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  
   <div class="section">
     <fieldset class="no-style">
       <%= f.button :submit, :value => "Save Entry" %>
