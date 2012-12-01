@@ -356,88 +356,108 @@
   
   <div class="section thought-process">
     <h2>Thought Process</h2>
-    <fieldset class="perception hallucinations">
+    <fieldset class="thought-process thought-content">
       <h3>Content</h3>
       <div class="checkboxes">
-        <div class="checkbox"><%= f.input :perception_hallucinations_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_hypnagogic, :label => "Hypnagogic", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_hypnopompic, :label => "Hypnopompic", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_auditory, :label => "Auditory", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_visual, :label => "Visual", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_olfactory, :label => "Olfactory", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_gustatory, :label => "Gustatory", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_tactile, :label => "Tactile", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_somatic, :label => "Somatic", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_lilliputian, :label => "Lillipution", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_mood_congruent, :label => "Congruent", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_mood_incongruent, :label => "Incongruent", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_hallucinosis, :label => "Hallucinosis", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_synethesia, :label => "Synethesia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_trailing, :label => "Trailing", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_content_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_content_absence_of_thought, :label => "Unremarkable", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_content_obsession, :label => "Obsession", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_content_compulsion, :label => "Compulsion", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_content_monomania, :label => "Monomania", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_content_egomania, :label => "Egomania", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_content_hypochondria, :label => "Hypochondria", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_content_thought_trending, :label => "Thought Trending", :wrapper => :checkbox %></div>
         <div class="notes">
-          <%= f.input :perception_hallucinations, :label => "Notes" %>
+          <%= f.input :thought_process_content, :label => "Notes" %>
         </div>
       </div>
     </fieldset>
-    <fieldset class="perception disassociation">
+    <fieldset class="thought-process delusions">
       <h3>Delusions</h3>
       <div class="checkboxes">
-        <div class="checkbox"><%= f.input :perception_disassociation_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_hysterical_anesthesia, :label => "Hysterical Anesthesia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_macropsia, :label => "Macropsia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_micropsia, :label => "Micropsia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_depersonalization, :label => "Depersonalization", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_derealization, :label => "Derealization", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_fugue, :label => "Fugue", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_multiple_personality, :label => "Multiple Personality", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_delusions_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_delusions_bizarre, :label => "Bizarre", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_delusions_mood_congruent, :label => "Mood Congruent", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_delusions_mood_incongruent, :label => "Mood Incongruent", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_delusions_somatic, :label => "Somatic", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_delusions_paranoid, :label => "Paranoid", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_delusions_persecutory, :label => "Persecutory", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_delusions_grandiose, :label => "Grandiose", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_delusions_self_accusatory, :label => "Self Accusatory", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_delusions_control, :label => "Control", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_delusions_thought_withdrawal, :label => "Thought Withdrawal", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_delusions_thought_insertion, :label => "Thought Insertion", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_delusions_thought_broadcasting, :label => "Thought Broadcasting", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_delusions_infidelity, :label => "Infidelity", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_delusions_erotomania, :label => "Erotomania", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_delusions_pseudolgoa_fantasy, :label => "Pseudolgoa Fantasy", :wrapper => :checkbox %></div>
         <div class="notes">
-          <%= f.input :perception_disassociation, :label => "Notes" %>
+          <%= f.input :thought_process_delusions, :label => "Notes" %>
         </div>
       </div>
     </fieldset>
-    <fieldset class="perception agnosia">
-      <h3>Preoccupations/Suicidal Ideation</h3>
+    <fieldset class="thought-process preoccupations">
+      <h3>Preoccupations/ Suicidal Ideation</h3>
       <div class="checkboxes">
-        <div class="checkbox"><%= f.input :perception_agnosia_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_agnosia_anosognosia, :label => "Anosognosia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_agnosia_autotopagnosia, :label => "Autotopagnosia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_agnosia_visual_agnosia, :label => "Visual Agnosia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_agnosia_astereognosia, :label => "Astereonosia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_agnosia_prosopagnosia, :label => "Prosopagnosia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_preoccupations_suicidal_ideation_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_preoccupations_suicidal_ideation_ideation_history, :label => "Ideation History", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_preoccupations_suicidal_ideation_previous_attempts, :label => "Previous Attempts", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_preoccupations_suicidal_ideation_current_ideation, :label => "Current Ideation", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_preoccupations_suicidal_ideation_impulsiveness, :label => "Impulsiveness", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_preoccupations_suicidal_ideation_viable_plan, :label => "Viable Plan", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_preoccupations_suicidal_ideation_available_means, :label => "Available Means", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_preoccupations_suicidal_ideation_planning_of_affairs, :label => "Planning of Affairs", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_preoccupations_suicidal_ideation_history_of_violence, :label => "History of Violence", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_preoccupations_suicidal_ideation_current_intent_of_violence, :label => "Current Intent of Violence", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_preoccupations_suicidal_ideation_viable_plan_for_violence, :label => "Viable Plan for Violence", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_preoccupations_suicidal_ideation_means_for_violence_acts, :label => "Means for Violent Acts", :wrapper => :checkbox %></div>
         <div class="notes">
-          <%= f.input :perception_agnosia, :label => "Notes" %>
+          <%= f.input :thought_process_preoccupations_suicidal_ideation, :label => "Notes" %>
         </div>
       </div>
     </fieldset>
-    <fieldset class="perception disassociation">
+    <fieldset class="thought-process phobia">
       <h3>Phobia</h3>
       <div class="checkboxes">
-        <div class="checkbox"><%= f.input :perception_disassociation_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_hysterical_anesthesia, :label => "Hysterical Anesthesia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_macropsia, :label => "Macropsia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_micropsia, :label => "Micropsia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_depersonalization, :label => "Depersonalization", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_derealization, :label => "Derealization", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_fugue, :label => "Fugue", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_multiple_personality, :label => "Multiple Personality", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_phobia_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_phobia_simple, :label => "Simple", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_phobia_social, :label => "Social", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_phobia_acrophobia, :label => "Acrophobia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_phobia_claustrophobia, :label => "Claustrophobia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_phobia_xenophobia, :label => "Xenophobia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_phobia_zoophobia, :label => "Zoophobia", :wrapper => :checkbox %></div>
         <div class="notes">
-          <%= f.input :perception_disassociation, :label => "Notes" %>
+          <%= f.input :thought_process_phobia, :label => "Notes" %>
         </div>
       </div>
     </fieldset>
-    <fieldset class="perception disassociation">
+    <fieldset class="thought-process thought-form">
       <h3>Thought Form</h3>
       <div class="checkboxes">
-        <div class="checkbox"><%= f.input :perception_disassociation_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_hysterical_anesthesia, :label => "Hysterical Anesthesia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_macropsia, :label => "Macropsia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_micropsia, :label => "Micropsia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_depersonalization, :label => "Depersonalization", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_derealization, :label => "Derealization", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_fugue, :label => "Fugue", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_multiple_personality, :label => "Multiple Personality", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_thought_form_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_thought_form_mental_disorder, :label => "Mental Disorder", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_thought_form_neurosis, :label => "Neurosis", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_thought_form_psychosis, :label => "Psychosis", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_thought_form_reality_testing, :label => "Reality Testing", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_thought_form_illogical_thinking, :label => "Illogical Thinking", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_thought_form_autistic_thinking, :label => "Autistic Thinking", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_thought_form_magical_thinking, :label => "Magical Thinking", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_thought_form_concrete_thinking, :label => "Concrete Thinking", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_thought_form_abstract_thinking, :label => "Abstract Thinking", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_thought_form_word_salad, :label => "Word Salad", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_thought_form_circumstantiality, :label => "Circumstantiality", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_thought_form_tangential, :label => "Tangential", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_thought_form_incoherence, :label => "Incoherence", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_thought_form_perseveration, :label => "Perserveration", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_thought_form_condensation, :label => "Condensation", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_thought_form_irrelevant_responses, :label => "Irrelevant Responses", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_thought_form_loosening, :label => "Loosening", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_thought_form_derailment, :label => "Derailment", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_thought_form_flight_of_ideas, :label => "Flight of Ideas", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_thought_form_loose_associations, :label => "Loose Associations", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :thought_process_thought_form_blocking, :label => "Blocking", :wrapper => :checkbox %></div>
         <div class="notes">
-          <%= f.input :perception_disassociation, :label => "Notes" %>
+          <%= f.input :thought_process_thought_form, :label => "Notes" %>
         </div>
       </div>
     </fieldset>
@@ -445,115 +465,89 @@
   
   <div class="section cognition">
     <h2>Cognition</h2>
-    <fieldset class="cognition ">
+    <fieldset class="cognition consciousness">
       <h3>Consciousness</h3>
       <div class="checkboxes">
-        <div class="checkbox"><%= f.input :perception_hallucinations_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_hypnagogic, :label => "Hypnagogic", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_hypnopompic, :label => "Hypnopompic", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_auditory, :label => "Auditory", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_visual, :label => "Visual", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_olfactory, :label => "Olfactory", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_gustatory, :label => "Gustatory", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_tactile, :label => "Tactile", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_somatic, :label => "Somatic", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_lilliputian, :label => "Lillipution", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_mood_congruent, :label => "Congruent", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_mood_incongruent, :label => "Incongruent", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_hallucinosis, :label => "Hallucinosis", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_synethesia, :label => "Synethesia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_trailing, :label => "Trailing", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :cognition_consciousness_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :cognition_consciousness_disorientated, :label => "Disorientated", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :cognition_consciousness_clouding, :label => "Clouding", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :cognition_consciousness_delirium, :label => "Delirium", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :cognition_consciousness_coma, :label => "Coma", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :cognition_consciousness_twilight_state, :label => "Twilight State", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :cognition_consciousness_dreamlike_state, :label => "Dreamlike State", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :cognition_consciousness_somnolence, :label => "Somnolence", :wrapper => :checkbox %></div>
         <div class="notes">
-          <%= f.input :perception_hallucinations, :label => "Notes" %>
+          <%= f.input :cognition_consciousness, :label => "Notes" %>
         </div>
       </div>
     </fieldset>
-    <fieldset class="perception disassociation">
+    <fieldset class="cognition orientation">
       <h3>Orientation</h3>
       <div class="checkboxes">
-        <div class="checkbox"><%= f.input :perception_disassociation_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_hysterical_anesthesia, :label => "Hysterical Anesthesia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_macropsia, :label => "Macropsia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_micropsia, :label => "Micropsia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_depersonalization, :label => "Depersonalization", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_derealization, :label => "Derealization", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_fugue, :label => "Fugue", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_multiple_personality, :label => "Multiple Personality", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :cognition_orientation_to_time, :label => "To Time", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :cognition_orientation_to_place, :label => "To Place", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :cognition_orientation_to_person, :label => "To Person", :wrapper => :checkbox %></div>
         <div class="notes">
-          <%= f.input :perception_disassociation, :label => "Notes" %>
+          <%= f.input :cognition_orientation, :label => "Notes" %>
         </div>
       </div>
     </fieldset>
-    <fieldset class="perception agnosia">
+    <fieldset class="cognition concentration">
       <h3>Concentration</h3>
       <div class="checkboxes">
-        <div class="checkbox"><%= f.input :perception_agnosia_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_agnosia_anosognosia, :label => "Anosognosia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_agnosia_autotopagnosia, :label => "Autotopagnosia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_agnosia_visual_agnosia, :label => "Visual Agnosia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_agnosia_astereognosia, :label => "Astereonosia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_agnosia_prosopagnosia, :label => "Prosopagnosia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :cognition_concentration_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :cognition_concentration_focused, :label => "Focused", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :cognition_concentration_easily_distracted, :label => "Easily Distracted", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :cognition_concentration_often_distracted, :label => "Often Distracted", :wrapper => :checkbox %></div>
         <div class="notes">
-          <%= f.input :perception_agnosia, :label => "Notes" %>
+          <%= f.input :cognition_concentration, :label => "Notes" %>
         </div>
       </div>
     </fieldset>
-    <fieldset class="perception disassociation">
+    <fieldset class="cognition memory">
       <h3>Memory</h3>
       <div class="checkboxes">
-        <div class="checkbox"><%= f.input :perception_disassociation_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_hysterical_anesthesia, :label => "Hysterical Anesthesia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_macropsia, :label => "Macropsia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_micropsia, :label => "Micropsia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_depersonalization, :label => "Depersonalization", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_derealization, :label => "Derealization", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_fugue, :label => "Fugue", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_multiple_personality, :label => "Multiple Personality", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :cognition_memory_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>        
+        <div class="checkbox"><%= f.input :cognition_memory_localized_amnesia, :label => "Localized Amnesia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :cognition_memory_generalized_amnesia, :label => "Generalized Amnesia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :cognition_memory_selective_amnesia, :label => "Selective Amnesia", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :cognition_memory_short_term_in_tact, :label => "Short Term Intact", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :cognition_memory_long_term_in_tact, :label => "Long Term Intact", :wrapper => :checkbox %></div>
         <div class="notes">
-          <%= f.input :perception_disassociation, :label => "Notes" %>
+          <%= f.input :cognition_memory, :label => "Notes" %>
         </div>
       </div>
     </fieldset>
   </div>
   
-  <div class="section cognition">
+  <div class="section insight">
     <h2>Insight/Judgement</h2>
-    <fieldset class="cognition ">
+    <fieldset class="insight judement">
       <h3>Judgement</h3>
       <div class="checkboxes">
-        <div class="checkbox"><%= f.input :perception_hallucinations_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_hypnagogic, :label => "Hypnagogic", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_hypnopompic, :label => "Hypnopompic", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_auditory, :label => "Auditory", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_visual, :label => "Visual", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_olfactory, :label => "Olfactory", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_gustatory, :label => "Gustatory", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_tactile, :label => "Tactile", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_somatic, :label => "Somatic", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_lilliputian, :label => "Lillipution", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_mood_congruent, :label => "Congruent", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_mood_incongruent, :label => "Incongruent", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_hallucinosis, :label => "Hallucinosis", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_synethesia, :label => "Synethesia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_hallucinations_trailing, :label => "Trailing", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :insight_judgement_judgement_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :insight_judgement_judgement_critical, :label => "Critical", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :insight_judgement_judgement_automatic, :label => "Automatic", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :insight_judgement_judgement_impaired, :label => "Impaired", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :insight_judgement_judgement_good, :label => "Good", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :insight_judgement_judgement_fair, :label => "Fair", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :insight_judgement_judgement_poor, :label => "Poor", :wrapper => :checkbox %></div>
         <div class="notes">
-          <%= f.input :perception_hallucinations, :label => "Notes" %>
+          <%= f.input :insight_judgement_judgement, :label => "Notes" %>
         </div>
       </div>
     </fieldset>
     <fieldset class="perception disassociation">
       <h3>Insight</h3>
       <div class="checkboxes">
-        <div class="checkbox"><%= f.input :perception_disassociation_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_hysterical_anesthesia, :label => "Hysterical Anesthesia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_macropsia, :label => "Macropsia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_micropsia, :label => "Micropsia", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_depersonalization, :label => "Depersonalization", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_derealization, :label => "Derealization", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_fugue, :label => "Fugue", :wrapper => :checkbox %></div>
-        <div class="checkbox"><%= f.input :perception_disassociation_multiple_personality, :label => "Multiple Personality", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :insight_judgement_insight_unremarkable, :label => "Unremarkable", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :insight_judgement_insight_impairment_in_insight, :label => "Impairment in Insight", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :insight_judgement_insight_denial_of_disorder, :label => "Denial of Disorder", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :insight_judgement_insight_good_insight, :label => "Good Insight", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :insight_judgement_insight_fair_insight, :label => "Fair Insight", :wrapper => :checkbox %></div>
+        <div class="checkbox"><%= f.input :insight_judgement_insight_poor_insight, :label => "Poor Insight", :wrapper => :checkbox %></div>
         <div class="notes">
-          <%= f.input :perception_disassociation, :label => "Notes" %>
+          <%= f.input :insight_judgement_insight, :label => "Notes" %>
         </div>
       </div>
     </fieldset>
